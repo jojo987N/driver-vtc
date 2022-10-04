@@ -208,7 +208,7 @@ const Earnings = ()=>{
       borderRadius: 20,
       marginTop: 20
     }}>
-      <Text style={{
+      {/* <Text style={{
         color: "white",
         paddingVertical: 5,
         paddingHorizontal: 10,
@@ -216,7 +216,10 @@ const Earnings = ()=>{
       }}> Votre crédit: 
         <Text style={{
           color: "#1a8cff"
-        }}>{currency}</Text> 0.00 </Text>
+        }}>{currency}</Text> 0.00 </Text> */}
+        <Text style={{fontSize: 20, color: "white"}}>Votre crédit: </Text>
+        <Text style={{color: "#1a8cff"}}>{currency}</Text>
+        <Text style={{fontSize: 25, color: "white"}}>0.00</Text>
     </View>
   )
 }

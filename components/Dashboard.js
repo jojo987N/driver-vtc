@@ -14,7 +14,7 @@ import { dashboardItems } from '../global/data';
 export default function Dashboard({navigation}) {
   return (
     <View style={styles.container}>
-  <LineChart
+  {/* <LineChart
     data={{
       labels: ["January", "February", "March", "April", "May", "June"],
       datasets: [
@@ -56,7 +56,7 @@ export default function Dashboard({navigation}) {
       marginVertical: 8,
       borderRadius: 16
     }}
-  />
+  /> */}
     <View style={styles.container2}>
         <Total title={`TOTAL REVENUE`} value="$32,575"/>
         <Total title={`TOTAL PROFIT`} value="$20,590"/>

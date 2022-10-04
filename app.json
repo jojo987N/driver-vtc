@@ -1,0 +1,26 @@
+ {
+   "expo": {
+    "name": "Good Foods Driver",
+    "icon": "./assets/images/logo512.png",
+    "description": "this is Good Foods Driver App", 
+    "splash": {
+      "image": "./assets/images/splash-screen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "version": "1.0.0",
+    "slug": "good-foods-driver0",
+    "ios": {
+      "bundleIdentifier": "com.goodfoodsdriver.goodfoodsdriver",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "permissions":[
+       "ACCESS_COARSE_LOCATION",
+       "ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.goodfoodsdriver.goodfoodsdriver",
+      "versionCode": 1
+    }
+   }
+ }

@@ -58,8 +58,8 @@ export default function Dashboard({navigation}) {
     }}
   /> */}
     <View style={styles.container2}>
-        <Total title={`TOTAL REVENUE`} value="$32,575"/>
-        <Total title={`TOTAL PROFIT`} value="$20,590"/>
+    <Total title={`TOTAL PROPOSALS`} value="2"/>
+        <Total title={`TOTAL REVENUE`} value="50"/>
     </View>
     <FlatList 
     data={dashboardItems}

@@ -82,6 +82,13 @@ export default function Dashboard({navigation}) {
     numColumns={2}
     key={2}
     />
+    <View style={{backgroundColor: "grey"}}>
+      <Text>Votre crédit est de: 0.00</Text>
+      <View style={{backgroundColor: "yellow"}}>
+        <Text>Ajouter Crédit</Text>
+      </View>
+
+    </View>
     </View>
   )
 }

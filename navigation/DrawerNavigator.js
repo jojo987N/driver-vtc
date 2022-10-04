@@ -143,6 +143,21 @@ export default function DrawerNavigator() {
             }}
         />
 
+<Drawer.Screen 
+            name = "Recharge"
+            initialParams={{myLocation: true}}
+            component={OrdersScreen}
+            options={{
+                title: "My Location",
+                drawerIcon: ({focussed, size}) =>(
+                  <FontAwesome
+                  name="money" 
+                  size={size} 
+                  color={focussed} />
+                )
+            }}
+        />
+
     {/* <Drawer.Screen 
             name = "Settings"
             

@@ -49,7 +49,7 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons} from "@expo/vector-icons"
     {
       label: "Orders InProgress",
       icon: {
-        type: MaterialIcons,
+        type: FontAwesome,
         name: "hourglass-start",
         size: 24,
         color: "black"

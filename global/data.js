@@ -45,6 +45,7 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons} from "@expo/vector-icons"
         size: 24,
         color: "black"
       }
+    }
    
 ]
 

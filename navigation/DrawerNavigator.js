@@ -10,6 +10,7 @@ import History from '../screens/History';
 import { AntDesign, Entypo, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import Settings from '../screens/Settings';
 import { useNavigation } from '@react-navigation/native'
+import Wallet from '../screens/Wallet';
 
 const Drawer = createDrawerNavigator();
 
@@ -145,8 +146,8 @@ export default function DrawerNavigator() {
 
 <Drawer.Screen 
             name = "Recharge"
-            initialParams={{myLocation: true}}
-            component={OrdersScreen}
+            // initialParams={{myLocation: true}}
+            component={Wallet}
             options={{
                 title: "Recharge",
                 drawerIcon: ({focussed, size}) =>(

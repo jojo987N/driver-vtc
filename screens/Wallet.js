@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity, Modal, StatusBar} from 'react-native'
 import React, { useState } from 'react'
-import { ArrowBack } from '../components/restaurantDetail/About'
+// import { ArrowBack } from '../components/restaurantDetail/About'
 import { grey1 } from '../global'
 import { AntDesign } from '@expo/vector-icons'
 import { stripePayment } from '../utils'
@@ -26,7 +26,7 @@ export default function Wallet({ navigation }) {
                 <AddFunds setModalVisible={setModalVisible}  setAmount={setAmount}/>
             </Modal>
             <View style={styles.container}>
-                <ArrowBack navigation={navigation} />
+                {/* <ArrowBack navigation={navigation} /> */}
                 <Text style={styles.title}>Wallet</Text>
                 <View style={styles.cash}>
                     <View style={styles.cashContainer}>

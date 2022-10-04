@@ -214,7 +214,11 @@ export default function OrdersScreen({ route, navigation }) {
               />
             </BottomSheetScrollView>
           )}
-          {route.params.dashboard && <OffButton />}
+          {route.params.dashboard && 
+          <View>
+            <Recharche />
+            <OffButton />
+          </View>}
         </BottomSheet>
       </View>
       {showOrderCountDown ? (
@@ -347,6 +351,35 @@ const OffButton = () => (
     </Text>
   </TouchableOpacity>
 );
+
+const Recharche = () => (
+  <TouchableOpacity
+    onPress={() => {
+      // updateDriverOnOff(APP_CONSTANT.OFFLINE);
+    }}
+    style={{
+      backgroundColor: "red",
+      width: 70,
+      height: 70,
+      borderRadius: 20,
+      alignItems: "center",
+      justifyContent: "center",
+      alignSelf: "center",
+      marginBottom: 20,
+    }}
+  >
+    <Text
+      style={{
+        fontWeight: "bold",
+        fontSize: 20,
+        color: "white",
+      }}
+    >
+      OFF
+    </Text>
+  </TouchableOpacity>
+);
+
 export const MenuButton = ({ navigation }) => {
   return (
     <View style={{ position: "absolute", top: 25, left: 10 }}>

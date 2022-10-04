@@ -364,7 +364,7 @@ const Recharche = () => (
       borderRadius: 20,
       alignItems: "center",
       justifyContent: "center",
-      alignSelf: "center",
+      // alignSelf: "center",
       marginBottom: 20,
     }}
   >

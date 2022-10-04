@@ -213,7 +213,7 @@ const Earnings = ()=>{
         paddingVertical: 5,
         paddingHorizontal: 10,
         fontSize: 25
-      }}>
+      }}> Votre crédit: 
         <Text style={{
           color: "#1a8cff"
         }}>{currency}</Text> 0.00 </Text>

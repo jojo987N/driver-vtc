@@ -216,7 +216,7 @@ export default function OrdersScreen({ route, navigation }) {
           )}
           {route.params.dashboard && 
           <View>
-            <Recharche />
+            {/* <Recharche /> */}
             <OffButton />
           </View>}
         </BottomSheet>

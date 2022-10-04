@@ -336,7 +336,7 @@ const OffButton = () => (
       borderRadius: 50,
       alignItems: "center",
       justifyContent: "center",
-      alignSelf: "center",
+      // alignSelf: "center",
       marginBottom: 20,
     }}
   >
@@ -360,7 +360,7 @@ const Recharche = () => (
     style={{
       backgroundColor: "red",
       width: 150,
-      height: 70,
+      height: 50,
       borderRadius: 20,
       alignItems: "center",
       justifyContent: "center",

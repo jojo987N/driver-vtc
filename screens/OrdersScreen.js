@@ -359,7 +359,7 @@ const Recharche = () => (
     }}
     style={{
       backgroundColor: "red",
-      width: 70,
+      width: 150,
       height: 70,
       borderRadius: 20,
       alignItems: "center",
@@ -375,7 +375,7 @@ const Recharche = () => (
         color: "white",
       }}
     >
-      OFF
+      Recharge
     </Text>
   </TouchableOpacity>
 );

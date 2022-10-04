@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity, StatusBar} from 'react-native'
 import React, { useState } from 'react'
-import { ArrowBack } from '../components/restaurantDetail/About'
+// import { ArrowBack } from '../components/restaurantDetail/About'
 import { CheckBox, Divider, } from 'react-native-elements'
 import { stripePayment } from '../utils'
 import { useStripe } from '@stripe/stripe-react-native';

@@ -336,7 +336,7 @@ const OffButton = () => (
       borderRadius: 50,
       alignItems: "center",
       justifyContent: "center",
-      // alignSelf: "center",
+      alignSelf: "center",
       marginBottom: 20,
     }}
   >

@@ -262,7 +262,7 @@ const Earnings = () => {
           color: "#1a8cff"
         }}>{currency}</Text> 0.00 </Text> */}
       <View style={{ flexDirection: "row", justifyContent: "space-around", padding: 10, paddingHorizontal: 20, alignItems: "center"}}>
-        <Text style={{ fontSize: 18, color: "white", paddingHorizontal: 10}}>Votre crédit: </Text>
+        <Text style={{ fontSize: 18, color: "white", paddingRight: 10}}>Votre crédit: </Text>
         <Text style={{ color: "#1a8cff", fontSize: 25 }}>{currency}</Text>
         <Text style={{ fontSize: 25, color: "white" }}>0.00</Text>
       </View>

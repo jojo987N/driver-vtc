@@ -1,11 +1,11 @@
-import { Entypo, FontAwesome, Ionicons } from "@expo/vector-icons";
+import { Entypo, FontAwesome, Ionicons, MaterialIcons} from "@expo/vector-icons";
 
  export const dashboardItems = [
     {
-     label: "Home",
+     label: "Order Confirmed",
      icon: {
-       type: Entypo,
-       name: "home",
+       type: MaterialIcons,
+       name: "confirmation-num",
        size: 24,
        color: "black"
      },
@@ -35,8 +35,16 @@ import { Entypo, FontAwesome, Ionicons } from "@expo/vector-icons";
        name: "calendar",
        size: 24,
        color: "black"
-     }
+     },
     },
+    {
+      label: "Orders Started",
+      icon: {
+        type: FontAwesome,
+        name: "hourglass-start",
+        size: 24,
+        color: "black"
+      }
    
 ]
 

@@ -143,7 +143,7 @@ export default function DrawerNavigator() {
             }}
         />
 
-    <Drawer.Screen 
+    {/* <Drawer.Screen 
             name = "Settings"
             
             component={Settings}
@@ -158,7 +158,7 @@ export default function DrawerNavigator() {
               />
                 )
             }}
-        />
+        /> */}
 
 
 

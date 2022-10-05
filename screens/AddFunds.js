@@ -49,15 +49,8 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
             // setChecked([true, false, false])
             setCheckboxs([{
                 checked: true,
-                ...checkboxs[0]
-            }, {
-                checked: false,
-                amount: checkboxs[1].amount
-            },
-            {
-                checked: false,
-                amount: checkboxs[2].amount
-            }])
+                amount: checkboxs[0].amount
+            }, ...checkboxs.slice(1)])
 
           }}
         />
@@ -74,17 +67,10 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
           containerStyle={styles.containerStyle}
           onPress={() => {
             // setChecked([false, true, false])
-            setCheckboxs([{
-                checked: false,
-                amount: checkboxs[0].amount
-            }, {
+            setCheckboxs([checkboxs[0], {
                 checked: true,
-                amount: checkboxs[1].amount
-            },
-            {
-                checked: false,
-                amount: checkboxs[2].amount
-            }])
+                amount: checkboxs[1].amount 
+            }, checkboxs[2]])
           }}
         />
 
@@ -101,16 +87,9 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
           containerStyle={styles.containerStyle}
           onPress={() => {
             // setChecked([false, false, true])
-            setCheckboxs([{
-                checked: false,
-                amount: checkboxs[0].amount
-            }, {
-                checked: false,
-                amount: checkboxs[1].amount
-            },
-            {
+            setCheckboxs([...checkboxs.slice(0, 2), {
                 checked: true,
-                amount: checkboxs[2].amount
+                ...checkboxs[2]
             }])
           }}
         />

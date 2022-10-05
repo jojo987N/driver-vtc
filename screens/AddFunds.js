@@ -12,9 +12,9 @@ import { stripePayment } from "../utils";
 import { useStripe } from "@stripe/stripe-react-native";
 
 export default function AddFunds({ navigation, setModalVisible, setAmount }) {
-  const [amount1, setAmount1] = useState(50);
-  const [amount2, setAmount2] = useState(100);
-  const [amount3, setAmount3] = useState(150);
+//   const [amount1, setAmount1] = useState(50);
+//   const [amount2, setAmount2] = useState(100);
+//   const [amount3, setAmount3] = useState(150);
   // const [checked1, setChecked1] = useState(false)
   // const [checked2, setChecked2] = useState(false)
   // const [checked3, setChecked3] = useState(false)
@@ -24,6 +24,8 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
     checked: false,
     amount: (i+1)*50
 }) ));
+
+
   const stripe = useStripe();
   return (
     <View style={styles.container}>
@@ -44,6 +46,11 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
           containerStyle={styles.containerStyle}
           onPress={() => {
             // setChecked([true, false, false])
+            setCheckboxs([{
+                checked: true,
+                ...checkboxs[0]
+            }, ...checkboxs.slice(1)])
+
           }}
         />
         <Divider
@@ -59,6 +66,10 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
           containerStyle={styles.containerStyle}
           onPress={() => {
             // setChecked([false, true, false])
+            setCheckboxs([checkboxs[0], {
+                checked: true,
+                ...checkboxs[1] 
+            }, checkboxs[2]])
           }}
         />
 
@@ -75,6 +86,10 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
           containerStyle={styles.containerStyle}
           onPress={() => {
             // setChecked([false, false, true])
+            setCheckboxs([...checkboxs.slice(0, 2), {
+                checked: true,
+                ...checkboxs[3]
+            }])
           }}
         />
       </View>

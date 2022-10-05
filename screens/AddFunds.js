@@ -121,7 +121,8 @@ import {
           <TouchableOpacity
             style={{ flex: 1 }}
             onPress={() => {
-              setModalVisible(!checked);
+            //   setModalVisible(!checked);
+            setModalVisible(false);
             }}
           >
             <Text style={{ padding: 20, fontSize: 20 }}>CANCEL</Text>

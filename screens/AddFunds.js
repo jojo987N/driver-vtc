@@ -27,7 +27,7 @@ export default function AddFunds({ navigation, setModalVisible, setAmount}) {
                     uncheckedIcon="circle-o"
                     containerStyle={styles.containerStyle} 
                     onPress={() => {
-                        setChecked(true)
+                        setChecked(!checked)
                     }}/>
                 <Divider style={{ marginHorizontal: 20, marginTop: 20, marginBottom: 20 }} />
                 <CheckBox
@@ -37,7 +37,7 @@ export default function AddFunds({ navigation, setModalVisible, setAmount}) {
                     uncheckedIcon="circle-o"
                     containerStyle={styles.containerStyle} 
                     onPress={() => {
-                        setChecked(true)
+                        setChecked(!checked)
                     }}/>
             
 
@@ -49,12 +49,12 @@ export default function AddFunds({ navigation, setModalVisible, setAmount}) {
                 uncheckedIcon="circle-o"
                 containerStyle={styles.containerStyle} 
                 onPress={() => {
-                    setChecked(true)
+                    setChecked(!checked)
                 }}/>
             </View>
             <View style={{marginHorizontal: 20, flexDirection: "row", marginBottom: 20}}>
                 <TouchableOpacity style={{  flex: 1 }}   onPress={()=>{
-                    setModalVisible(false)
+                    setModalVisible(!checked)
                  }}>
                     <Text style={{padding: 20, fontSize: 20 }}>CANCEL</Text>
                 </TouchableOpacity>

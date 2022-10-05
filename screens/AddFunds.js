@@ -49,7 +49,7 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
             // setChecked([true, false, false])
             setCheckboxs([{
                 checked: true,
-                amount: checkboxs[0].amount
+                ...checkboxs[0]
             }, {
                 checked: false,
                 amount: checkboxs[1].amount

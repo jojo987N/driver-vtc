@@ -49,7 +49,7 @@ import {
               // setChecked([true, false, false])
               setCheckboxs([{
                   checked: true,
-                  ...checkboxs[0]
+                  amount: checkboxs[0].amount
               }, {
                   checked: false,
                   amount: checkboxs[1].amount

@@ -47,7 +47,7 @@ export const stripePayment = (stripe, amount, setModalVisible, setAmount) => {
     body: JSON.stringify({
       // amount: 1099,
       amount: amount*100,
-      currency: 'usd',
+      currency: 'eur',
       // payment_method_types: ['card'],
     }),
     headers: {

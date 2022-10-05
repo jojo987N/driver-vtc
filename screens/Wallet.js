@@ -8,7 +8,7 @@ import { useStripe } from '@stripe/stripe-react-native';
 import AddFunds from './AddFunds'
 import {language, currency}  from '../global'
 import { driversCol } from '../firebase'
-import {where, onSnapshot } from 'firebase/firestore'
+import {where, onSnapshot, query} from 'firebase/firestore'
 
 
 

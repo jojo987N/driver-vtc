@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity, Modal, StatusBar} from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import { ArrowBack } from '../components/restaurantDetail/About'
 import { grey1 } from '../global'
 import { AntDesign } from '@expo/vector-icons'
@@ -7,6 +7,8 @@ import { stripePayment } from '../utils'
 import { useStripe } from '@stripe/stripe-react-native';
 import AddFunds from './AddFunds'
 import {language, currency}  from '../global'
+import { driversCol } from '../firebase'
+import {where, onSnapshot } from 'firebase/firestore'
 
 
 
@@ -15,6 +17,15 @@ export default function Wallet({ navigation }) {
     const stripe = useStripe();
     const [modalVisible, setModalVisible] = useState(false)
     const [amount, setAmount] = useState(0.00)
+
+    useEffect(()=> {
+        const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
+        onSnapshot(q, (snapshot) => {
+
+           setAmount(snapshot.docs[0].data().wallet)
+        })
+
+    }, [])
     return (
         <>
             <Modal

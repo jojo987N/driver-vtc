@@ -39,7 +39,7 @@ export function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
 
 export const stripePayment = () => {
 
-  const stripe = useStripe();
+ // const stripe = useStripe();
 
 
   fetch("http://192.241.139.136:3000/", {

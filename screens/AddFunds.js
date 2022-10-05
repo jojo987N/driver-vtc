@@ -38,7 +38,7 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
           title={
             <Text style={{ marginLeft: 10, fontSize: 25 }}>${checkboxs[0].amount}</Text>
           }
-          checked={checked[0].checked}
+          checked={checkboxs[0].checked}
           checkedIcon="dot-circle-o"
           uncheckedIcon="circle-o"
           containerStyle={styles.containerStyle}
@@ -53,7 +53,7 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
           title={
             <Text style={{ marginLeft: 10, fontSize: 25 }}>${checkboxs[1].amount}</Text>
           }
-          checked={checked[1].checked}
+          checked={checkboxs[1].checked}
           checkedIcon="dot-circle-o"
           uncheckedIcon="circle-o"
           containerStyle={styles.containerStyle}
@@ -69,7 +69,7 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
           title={
             <Text style={{ marginLeft: 10, fontSize: 25 }}>${checkboxs[2].amount}</Text>
           }
-          checked={checked[2].checked}
+          checked={checkboxs[2].checked}
           checkedIcon="dot-circle-o"
           uncheckedIcon="circle-o"
           containerStyle={styles.containerStyle}

@@ -37,7 +37,7 @@ export function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
 //     bottomSheet?.current.collapse()
 //   }
 
-export const stripePayment = (stripe, amount2, setModalVisible, setAmount) => {
+export const stripePayment = (stripe, amount, setModalVisible, setAmount) => {
 
  // const stripe = useStripe();
 
@@ -45,7 +45,8 @@ export const stripePayment = (stripe, amount2, setModalVisible, setAmount) => {
   fetch("http://192.241.139.136:3000/", {
     method: 'POST',
     body: JSON.stringify({
-      amount: 1099,
+      // amount: 1099,
+      amount: amount*100,
       currency: 'usd',
       // payment_method_types: ['card'],
     }),

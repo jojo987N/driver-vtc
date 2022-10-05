@@ -19,6 +19,7 @@ export default function AddFunds({ navigation, setModalVisible, setAmount }) {
   // const [checked2, setChecked2] = useState(false)
   // const [checked3, setChecked3] = useState(false)
 
+//   const [checked, setChecked] = useState(false);
 //   const [checked, setChecked] = useState(new Array(3).fill(false));
 const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
     checked: false,
@@ -88,7 +89,7 @@ const [checkboxs, setCheckboxs] = useState([ ...Array(3).keys() ].map( i => ({
             // setChecked([false, false, true])
             setCheckboxs([...checkboxs.slice(0, 2), {
                 checked: true,
-                ...checkboxs[3]
+                ...checkboxs[2]
             }])
           }}
         />

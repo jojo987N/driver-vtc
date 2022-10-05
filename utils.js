@@ -37,7 +37,7 @@ export function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
 //     bottomSheet?.current.collapse()
 //   }
 
-export const stripePayment = () => {
+export const stripePayment = (stripe, amount2, setModalVisible, setAmount) => {
 
  // const stripe = useStripe();
 

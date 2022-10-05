@@ -55,7 +55,7 @@ export const stripePayment = (stripe, amount2, setModalVisible, setAmount) => {
   }).then((response)=>{
       
       response.json().then(json =>{
-          // console.log(json)
+           console.log(json)
 
           stripe.initPaymentSheet({
               // customerId: json.customer,

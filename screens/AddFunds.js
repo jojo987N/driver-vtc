@@ -11,7 +11,9 @@ export default function AddFunds({ navigation, setModalVisible, setAmount}) {
     const [amount1, setAmount1] = useState(50)
     const [amount2, setAmount2] = useState(100)
     const [amount3, setAmount3] = useState(150)
-    const [checked, setChecked] = useState(false)
+    const [checked1, setChecked1] = useState(false)
+    const [checked2, setChecked2] = useState(false)
+    const [checked3, setChecked3] = useState(false)
     const stripe = useStripe();
     return (
         <View style={styles.container}>
@@ -22,34 +24,34 @@ export default function AddFunds({ navigation, setModalVisible, setAmount}) {
             <View style={{flex: 1}}>
                 <CheckBox
                     title={<Text style={{ marginLeft: 10, fontSize: 25}}>${amount1}</Text>}
-                    checked={checked}
+                    checked={checked1}
                     checkedIcon="dot-circle-o"
                     uncheckedIcon="circle-o"
                     containerStyle={styles.containerStyle} 
                     onPress={() => {
-                        setChecked(!checked)
+                        setChecked1(!checked1)
                     }}/>
                 <Divider style={{ marginHorizontal: 20, marginTop: 20, marginBottom: 20 }} />
                 <CheckBox
                     title={<Text style={{ marginLeft: 10, fontSize: 25}}>${amount2}</Text>}
-                    checked={checked}
+                    checked={checked2}
                     checkedIcon="dot-circle-o"
                     uncheckedIcon="circle-o"
                     containerStyle={styles.containerStyle} 
                     onPress={() => {
-                        setChecked(!checked)
+                        setChecked2(!checked2)
                     }}/>
             
 
             <Divider style={{ marginHorizontal: 20, marginTop: 20, marginBottom: 20 }} />
             <CheckBox
                 title={<Text style={{ marginLeft: 10, fontSize: 25}}>${amount3}</Text>}
-                checked={checked}
+                checked={checked3}
                 checkedIcon="dot-circle-o"
                 uncheckedIcon="circle-o"
                 containerStyle={styles.containerStyle} 
                 onPress={() => {
-                    setChecked(!checked)
+                    setChecked3(!checked3)
                 }}/>
             </View>
             <View style={{marginHorizontal: 20, flexDirection: "row", marginBottom: 20}}>

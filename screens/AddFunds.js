@@ -129,7 +129,7 @@ import {
           <TouchableOpacity
             style={{ backgroundColor: "black", flex: 1 }}
             onPress={() => {
-              stripePayment(stripe, amount2, setModalVisible, setAmount);
+               stripePayment(stripe, checkboxs.find(checkbox => checkbox.checked).amount, setModalVisible, setAmount);
             }}
           >
             <Text style={{ color: "white", padding: 20, fontSize: 20 }}>

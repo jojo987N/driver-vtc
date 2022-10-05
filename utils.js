@@ -1,4 +1,6 @@
 import * as Location from 'expo-location';
+import { useStripe } from '@stripe/stripe-react-native';
+
 
 export function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
     var R = 6371;
@@ -34,3 +36,45 @@ export function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
 //     if(route.params.myLocation)
 //     bottomSheet?.current.collapse()
 //   }
+
+export const stripePayment = () => {
+
+  const stripe = useStripe();
+
+
+  fetch("http://192.241.139.136:3000/", {
+    method: 'POST',
+    body: JSON.stringify({
+      amount: 1099,
+      currency: 'usd',
+      // payment_method_types: ['card'],
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then((response)=>{
+      
+      response.json().then(json =>{
+          // console.log(json)
+
+          stripe.initPaymentSheet({
+              // customerId: json.customer,
+              // customerEphemeralKeySecret: json.ephemeralKey,
+              paymentIntentClientSecret: json.paymentIntent,
+              merchantDisplayName: 'Merchant Name',
+              // allowsDelayedPaymentMethods: true,
+              // paymentIntentClientSecret: json.clientSecret,
+            }).then(initSheet => {
+                console.log(initSheet)
+
+                stripe.presentPaymentSheet({
+                    clientSecret:  json.paymentIntent
+                }).then(presentSheet =>{
+                    console.log(presentSheet)
+                })
+            })
+          
+      })
+      // console.log(JSON.stringify(response.json()))
+  })
+}

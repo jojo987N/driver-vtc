@@ -127,7 +127,7 @@ export const updateWallet = (amount) => {
   return getDocs(q).then(snapshot => {
     snapshot.docs.forEach(docc => {
       updateDoc(doc(db, 'drivers', docc.id), {
-        wallet: amount,
+        wallet: docc.data().wallet + amount,
       }).then(() => console.log('Updated'))
     })
   })

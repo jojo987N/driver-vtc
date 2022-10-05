@@ -124,7 +124,7 @@ export const updateOrderAccepted = (orderId, status, totalMinutes) => {
 
 export const updateWallet = (amount) => {
   const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
-  getDocs(q).then(snapshot => {
+  return getDocs(q).then(snapshot => {
     snapshot.docs.forEach(docc => {
       updateDoc(doc(db, 'drivers', docc.id), {
         wallet: amount,

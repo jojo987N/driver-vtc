@@ -74,6 +74,7 @@ export const stripePayment = (stripe, amount, setModalVisible, setAmount) => {
                 }).then(presentSheet =>{
                     console.log(presentSheet)
                     updateWallet(100)
+                    .then(_ => setModalVisible(false))
                 })
             })
           

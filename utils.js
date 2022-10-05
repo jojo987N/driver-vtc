@@ -1,5 +1,6 @@
 import * as Location from 'expo-location';
 import { useStripe } from '@stripe/stripe-react-native';
+import { updateWallet } from './firebase';
 
 
 export function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
@@ -72,6 +73,7 @@ export const stripePayment = (stripe, amount, setModalVisible, setAmount) => {
                     clientSecret:  json.paymentIntent
                 }).then(presentSheet =>{
                     console.log(presentSheet)
+                    updateWallet(100)
                 })
             })
           

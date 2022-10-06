@@ -12,7 +12,7 @@ export default function Menu({navigation}) {
     type="material-community"
     name='menu'
     color="black"
-    size={22}
+    size={32}
     onPress={()=>navigation.toggleDrawer()}
 />
   )

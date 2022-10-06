@@ -78,14 +78,14 @@ export default function Wallet({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         marginHorizontal: 10,
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
 
     },
     title: {
         fontSize: 35,
         marginLeft: 10,
         marginBottom: 30,
-        marginTop: 30,
+        // marginTop: 30,
     },
     cashContainer: {
         flexDirection: "row",

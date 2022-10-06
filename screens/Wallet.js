@@ -70,7 +70,10 @@ export default function Wallet({ navigation }) {
                     <Text style={styles.text}>Add voucher code </Text>
                 </View>
             </View>
-            <MenuButton navigation={navigation} />
+            <View style={{padding: 10}}>
+                <MenuButton navigation={navigation} />
+            </View>
+            
         </>
     )
 }

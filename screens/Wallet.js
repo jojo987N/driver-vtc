@@ -45,7 +45,7 @@ export default function Wallet({ navigation }) {
                     <View style={styles.cashContainer}>
                         <View style={styles.cashTexts}>
                             <Text style={styles.cashText}>Cash</Text>
-                            <Text style={styles.cashNumber}>{{amount1}.toLocaleString(language, {
+                            <Text style={styles.cashNumber}>{amount1.toLocaleString(language, {
         style: "currency",
         currency: currency
       })}</Text>

@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity, Modal, StatusBar} from 'react-native'
 import React, { useEffect, useState } from 'react'
 // import { ArrowBack } from '../components/restaurantDetail/About'
-import { grey1 } from '../global'
+import { APP_CONSTANT, grey1 } from '../global'
 import { AntDesign } from '@expo/vector-icons'
 import { stripePayment } from '../utils'
 import { useStripe } from '@stripe/stripe-react-native';
@@ -61,7 +61,7 @@ export default function Wallet({ navigation }) {
                     // stripePayment(stripe)
                     setModalVisible(true)
                 }}>
-                    <Text style={styles.text}>Add Funds to your wallet</Text>
+                    <Text style={styles.text}>{APP_CONSTANT['Add Funds to your wallet']}</Text>
                 </TouchableOpacity>
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>Connect Account</Text>

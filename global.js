@@ -24,6 +24,7 @@ export const APP_CONSTANT = {
     COMPLETED: "Completed",
     READY: "ready",
     STARTED : "STARTED",
+    "Add Funds to your wallet": "Ajoutez du crédit"
 }
 
 export const colors = {

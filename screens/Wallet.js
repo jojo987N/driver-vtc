@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         fontSize: 35,
         marginLeft: 10,
         marginBottom: 30,
-        marginTop: 20,
+        marginTop: 30,
     },
     cashContainer: {
         flexDirection: "row",

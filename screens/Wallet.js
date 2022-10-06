@@ -68,10 +68,10 @@ export default function Wallet({ navigation }) {
                 </View> */}
                 <View style={styles.textContainer}>
 
-                    <Text style={styles.text}>Vouchers</Text>
+                    <Text style={styles.text}>{APP_CONSTANT.Vouchers}</Text>
                 </View>
                 <View style={styles.textContainer}>
-                    <Text style={styles.text}>Add voucher code </Text>
+                    <Text style={styles.text}>{APP_CONSTANT['Add voucher code']}</Text>
                 </View>
             </View>
                

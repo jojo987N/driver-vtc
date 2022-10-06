@@ -1,4 +1,4 @@
-export const currency = "$"
+export const currency = "EUR"
 
 export const apiKey = "AIzaSyAwLZyznRMu86EDLO-fsRL8BgrCT7hXq7g" //{/* Your Google api Key here*/}
 

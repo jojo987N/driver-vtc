@@ -63,9 +63,9 @@ export default function Wallet({ navigation }) {
                 }}>
                     <Text style={styles.text}>{APP_CONSTANT['Add Funds to your wallet']}</Text>
                 </TouchableOpacity>
-                <View style={styles.textContainer}>
+                {/* <View style={styles.textContainer}>
                     <Text style={styles.text}>Connect Account</Text>
-                </View>
+                </View> */}
                 <View style={styles.textContainer}>
 
                     <Text style={styles.text}>Vouchers</Text>

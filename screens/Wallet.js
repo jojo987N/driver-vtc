@@ -39,7 +39,7 @@ export default function Wallet({ navigation }) {
             </Modal>
             <View style={styles.container}>
                 {/* <ArrowBack navigation={navigation} /> */}
-                <View>
+                <View style={{flexDirection: "row"}}>
                     <Menu navigation={navigation} />
                 </View>
                 

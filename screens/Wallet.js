@@ -9,6 +9,7 @@ import AddFunds from './AddFunds'
 import {language, currency}  from '../global'
 import { auth, driversCol } from '../firebase'
 import {where, onSnapshot, query} from 'firebase/firestore'
+import { MenuButton } from './OrdersScreen'
 
 
 
@@ -69,6 +70,7 @@ export default function Wallet({ navigation }) {
                     <Text style={styles.text}>Add voucher code </Text>
                 </View>
             </View>
+            <MenuButton navigation={navigation} />
         </>
     )
 }

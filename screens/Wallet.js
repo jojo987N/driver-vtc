@@ -18,6 +18,8 @@ export default function Wallet({ navigation }) {
     const [modalVisible, setModalVisible] = useState(false)
     const [amount, setAmount] = useState(0.00)
 
+    const amount1 = 0
+
     useEffect(()=> {
         const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
         onSnapshot(q, (snapshot) => {
@@ -43,7 +45,7 @@ export default function Wallet({ navigation }) {
                     <View style={styles.cashContainer}>
                         <View style={styles.cashTexts}>
                             <Text style={styles.cashText}>Cash</Text>
-                            <Text style={styles.cashNumber}>{{0}.toLocaleString(language, {
+                            <Text style={styles.cashNumber}>{{amount1}.toLocaleString(language, {
         style: "currency",
         currency: currency
       })}</Text>

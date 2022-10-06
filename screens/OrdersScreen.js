@@ -34,7 +34,7 @@ import {
   where,
   getDocs,
 } from "firebase/firestore";
-import { apiKey, currency, RADIUS } from "../global";
+import { apiKey, currency, currencySymbol, RADIUS } from "../global";
 import LottieView from "lottie-react-native";
 import { APP_CONSTANT } from "../global";
 import OnlineOffLine from "../components/ordersScreen/OnlineOffLine";
@@ -267,7 +267,7 @@ const Earnings = () => {
         }}>{currency}</Text> 0.00 </Text> */}
       <View style={{ flexDirection: "row", justifyContent: "space-around", padding: 10, paddingHorizontal: 20, alignItems: "center"}}>
         <Text style={{ fontSize: 18, color: "white", paddingRight: 10}}>Votre crédit: </Text>
-        <Text style={{ color: "#1a8cff", fontSize: 25 }}>{currency}</Text>
+        <Text style={{ color: "#1a8cff", fontSize: 25 }}>{currencySymbol}</Text>
         <Text style={{ fontSize: 25, color: "white" }}>0.00</Text>
       </View>
     </View>

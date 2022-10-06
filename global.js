@@ -1,5 +1,6 @@
 export const language = "en"
 export const currency = "USD"
+export const currencySymbol = "$"
 
 export const apiKey = "AIzaSyAwLZyznRMu86EDLO-fsRL8BgrCT7hXq7g" //{/* Your Google api Key here*/}
 

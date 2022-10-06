@@ -9,7 +9,6 @@ import AddFunds from './AddFunds'
 import {language, currency}  from '../global'
 import { auth, driversCol } from '../firebase'
 import {where, onSnapshot, query} from 'firebase/firestore'
-import { MenuButton } from './OrdersScreen'
 
 
 
@@ -39,6 +38,7 @@ export default function Wallet({ navigation }) {
             </Modal>
             <View style={styles.container}>
                 {/* <ArrowBack navigation={navigation} /> */}
+                <MenuButton navigation={navigation} />
                 <Text style={styles.title}>Wallet</Text>
                 <View style={styles.cash}>
                     <View style={styles.cashContainer}>
@@ -70,10 +70,18 @@ export default function Wallet({ navigation }) {
                     <Text style={styles.text}>Add voucher code </Text>
                 </View>
             </View>
-                <MenuButton navigation={navigation} />
+               
         </>
     )
 }
+
+const MenuButton = ({ navigation }) => {
+    return (
+      <View style={{  }}>
+        <Menu navigation={navigation} />
+      </View>
+    );
+  };
 
 const styles = StyleSheet.create({
     container: {

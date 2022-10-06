@@ -130,6 +130,7 @@ import {
           <TouchableOpacity
             style={{ backgroundColor: "black", flex: 1 }}
             onPress={() => {
+              setModalVisible(false);
                stripePayment(stripe, checkboxs.find(checkbox => checkbox.checked).amount, setModalVisible, setAmount);
             }}
           >

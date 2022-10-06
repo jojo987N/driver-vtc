@@ -84,7 +84,8 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 35,
         marginLeft: 10,
-        marginBottom: 30
+        marginBottom: 30,
+        marginTop: 10,
     },
     cashContainer: {
         flexDirection: "row",

@@ -9,6 +9,7 @@ import AddFunds from './AddFunds'
 import {language, currency}  from '../global'
 import { auth, driversCol } from '../firebase'
 import {where, onSnapshot, query} from 'firebase/firestore'
+import Menu from '../components/Menu'
 
 
 
@@ -38,7 +39,7 @@ export default function Wallet({ navigation }) {
             </Modal>
             <View style={styles.container}>
                 {/* <ArrowBack navigation={navigation} /> */}
-                <MenuButton navigation={navigation} />
+                <Menu navigation={navigation} />
                 <Text style={styles.title}>Wallet</Text>
                 <View style={styles.cash}>
                     <View style={styles.cashContainer}>
@@ -74,14 +75,6 @@ export default function Wallet({ navigation }) {
         </>
     )
 }
-
-const MenuButton = ({ navigation }) => {
-    return (
-      <View style={{  }}>
-        <Menu navigation={navigation} />
-      </View>
-    );
-  };
 
 const styles = StyleSheet.create({
     container: {

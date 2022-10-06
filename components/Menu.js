@@ -7,13 +7,13 @@ export default function Menu({navigation}) {
 
    
   return (
-    <Text>Bonjour</Text>
-//     <Icon
-//     type="material-community"
-//     name='menu'
-//     color="black"
-//     size={32}
-//     onPress={()=>navigation.toggleDrawer()}
-// />
+    // <Text>Bonjour</Text>
+    <Icon
+    type="material-community"
+    name='menu'
+    color="black"
+    size={22}
+    onPress={()=>navigation.toggleDrawer()}
+/>
   )
 }

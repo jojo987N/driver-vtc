@@ -39,7 +39,10 @@ export default function Wallet({ navigation }) {
             </Modal>
             <View style={styles.container}>
                 {/* <ArrowBack navigation={navigation} /> */}
-                <Menu navigation={navigation} />
+                <View>
+                    <Menu navigation={navigation} />
+                </View>
+                
                 <Text style={styles.title}>Wallet</Text>
                 <View style={styles.cash}>
                     <View style={styles.cashContainer}>

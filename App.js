@@ -1,6 +1,8 @@
 import { View, SafeAreaView, StatusBar} from "react-native";
 import RootNavigation from "./navigation/navigation";
 import {} from "./firebase"
+import "intl"
+import "intl/locale-data/jsonp/en"
 
 export default function App() {
 

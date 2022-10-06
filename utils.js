@@ -73,8 +73,9 @@ export const stripePayment = (stripe, amount, setModalVisible, setAmount) => {
                     clientSecret:  json.paymentIntent
                 }).then(presentSheet =>{
                     console.log(presentSheet)
+                    if(!presentSheet.error)
                     updateWallet(amount)
-                    .then(_ => setModalVisible(false))
+                    // .then(_ => setModalVisible(false))
                 })
             })
           

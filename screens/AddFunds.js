@@ -150,7 +150,8 @@ import {
     title: {
       fontSize: 35,
       marginLeft: 20,
-      paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+      // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+      marginTop: 20,
     },
     containerStyle: { backgroundColor: "transparent" },
   });

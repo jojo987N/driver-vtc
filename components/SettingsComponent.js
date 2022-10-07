@@ -87,7 +87,8 @@ const UploadImage = ({bs, defaultImage}) => {
   return (
     <View style={{
       alignItems: "center",
-      marginTop: 20
+      marginTop: 20,
+      width: 150,
     }}>
       <Pressable onPress={
         () => {
@@ -109,7 +110,7 @@ const UploadImage = ({bs, defaultImage}) => {
       <Text style={{
         fontSize: 8, fontWeight: "bold", color: "#3d5c5c",
         letterSpacing: 5
-      }}>{TRANSLATION.Upload}</Text>
+      }}>{TRANSLATION['Upload Profil']}</Text>
     </View>
   )
 }

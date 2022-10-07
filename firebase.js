@@ -202,7 +202,7 @@ export const updateDriver = (driver_id, image) => {
 export const updateDriverField = (driver_id, obj) => {
   const docRef = doc(db, 'drivers', driver_id)
   updateDoc(docRef, {
-    [Object.keys(obj)[0]]: image,
+    [Object.keys(obj)[0]]: obj[Object.keys(obj)[0]],
   })
     .then(() => console.log('good'))
 }

@@ -8,6 +8,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 // import SearchBar from './SearchBar'
 import { UserContext } from '../context/UserContext'
 import Menu from './Menu'
+import { TRANSLATION } from '../global'
 
 export default function SettingsComponent({ navigation, bs }) {
   const { setUserData, userData } = useContext(UserContext)
@@ -106,7 +107,7 @@ const UploadImage = ({bs}) => {
       <Text style={{
         fontSize: 25, fontWeight: "bold", color: "#3d5c5c",
         letterSpacing: 5
-      }}>Upload Image</Text>
+      }}>{TRANSLATION['Upload Photo']}</Text>
     </View>
   )
 }

@@ -116,17 +116,18 @@ export default function Upload({ route, navigation }) {
       flex: 1,
       alignItems: "center",
     }}>
-      <View style={{flexDirection: "row"}}>
-                    <Menu navigation={navigation} />
-                </View>
+      
       <BottomSheet
         ref={bs}
         snapPoints={["47%", "90%", 0]}
         renderContent={renderContent}
       />
-      <View style={{
+      {/* <View style={{
       }}>
-      </View>
+      </View> */}
+       <View style={{flexDirection: "row"}}>
+                    <Menu navigation={navigation} />
+                </View>
      
       <SettingsComponent bs={bs} />
     </GestureHandlerRootView>

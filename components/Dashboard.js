@@ -19,7 +19,7 @@ export default function Dashboard({navigation}) {
       labels: ["January", "February", "March", "April", "May", "June"],
       datasets: [
         {
-          data: [
+          data: [0
             // Math.random() * 100,
             // Math.random() * 100,
             // Math.random() * 100,

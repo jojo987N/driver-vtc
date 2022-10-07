@@ -118,13 +118,13 @@ export default function Upload({route, navigation}) {
             />
       <View style={{
       }}>
-        {image?(<Image source={{uri: image}} 
+        {/* {image?(<Image source={{uri: image}} 
         style={{
           width: 400,
           height:400,
           alignSelf: "flex-start",
           resizeMode: "contain"
-        }}/>):(<></>)}
+        }}/>):(<></>)} */}
       </View>
        <SettingsComponent bs={bs}/>
        <MenuButton navigation={navigation} />

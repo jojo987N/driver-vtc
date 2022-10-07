@@ -33,8 +33,8 @@ export default function Upload({ route, navigation }) {
     console.log(pickerResult)
     if (pickerResult.cancelled === true) return;
     uploadImage(pickerResult.uri)
-    setRestaurantData({
-      ...restaurantData,
+    setUserData({
+      ...userData,
       image: pickerResult.uri
     })
   }

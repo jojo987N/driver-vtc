@@ -35,7 +35,8 @@ export const TRANSLATION = {
     "Take a Photo": "Prendre une Photo",
     "Choose From Library": "Choisir une image",
     "Cancel": "Annuler",
-    "Upload Photo": "Téléchargez une photo"
+    "Upload Photo": "Téléchargez une photo",
+    "Upload": "Téléchargez"
 }
 
 export const colors = {

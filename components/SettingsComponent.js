@@ -107,7 +107,7 @@ const UploadImage = ({bs}) => {
       <Text style={{
         fontSize: 25, fontWeight: "bold", color: "#3d5c5c",
         letterSpacing: 5
-      }}>{TRANSLATION['Upload Photo']}</Text>
+      }}>{TRANSLATION.Upload}</Text>
     </View>
   )
 }

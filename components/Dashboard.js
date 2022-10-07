@@ -14,18 +14,18 @@ import { dashboardItems } from '../global/data';
 export default function Dashboard({navigation}) {
   return (
     <View style={styles.container}>
-  <LineChart
+  {/* <LineChart
     data={{
       labels: ["January", "February", "March", "April", "May", "June"],
       datasets: [
         {
-          data: [0
-            // Math.random() * 100,
-            // Math.random() * 100,
-            // Math.random() * 100,
-            // Math.random() * 100,
-            // Math.random() * 100,
-            // Math.random() * 100
+          data: [
+            Math.random() * 100,
+            Math.random() * 100,
+            Math.random() * 100,
+            Math.random() * 100,
+            Math.random() * 100,
+            Math.random() * 100
           ]
         }
       ]
@@ -56,7 +56,7 @@ export default function Dashboard({navigation}) {
       marginVertical: 8,
       borderRadius: 16
     }}
-  />
+  /> */}
     <View style={styles.container2}>
     <Total title={`TOTAL PROPOSALS`} value="2"/>
         <Total title={`TOTAL REVENUE`} value="50"/>

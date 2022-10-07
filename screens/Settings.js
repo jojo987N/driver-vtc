@@ -10,9 +10,10 @@ import { Camera } from "expo-camera"
 import { updateProduct, updateRestaurant } from "../firebase"
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
 import SettingsComponent from "../components/SettingsComponent";
+import { UserContext } from "../context/UserContext";
 
 export default function Upload({ route, navigation }) {
-  const { restaurantData, setRestaurantData } = useContext(RestaurantContext)
+  const { setUserData, userData } = useContext(UserContext)
   const uploadImage = async (uri) => {
     const response = await fetch(uri)
     const blob = await response.blob()

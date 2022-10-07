@@ -41,7 +41,8 @@ export default function SettingsComponent({ navigation, bs }) {
           }
         }>
           <Image
-            source={{ uri: "https://www.shareicon.net/data/128x128/2016/04/10/747353_people_512x512.png" }}
+            // source={{ uri: "https://www.shareicon.net/data/128x128/2016/04/10/747353_people_512x512.png" }}
+            source={require("../assets/images/image-profil.png")}
             style={{
               width: 100,
               height: 100

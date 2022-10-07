@@ -26,8 +26,15 @@ export const APP_CONSTANT = {
     STARTED : "STARTED",
     "Add Funds to your wallet": "Ajoutez du crédit",
     "Vouchers": "Coupons",
-    "Add voucher code": "Ajoutez un coupon"
+    "Add voucher code": "Ajoutez un coupon",
+    "Take a Photo": "Prendre une Photo"
 
+}
+
+export const TRANSLATION = {
+    "Take a Photo": "Prendre une Photo",
+    "Choose From Library": "Choisir une image",
+    "Cancel": "Annuler"
 }
 
 export const colors = {

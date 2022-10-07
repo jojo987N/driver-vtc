@@ -11,6 +11,7 @@ import { updateProduct } from "../firebase"
 import {getDownloadURL, getStorage, ref, uploadBytes} from 'firebase/storage'
 import SettingsComponent from "../components/SettingsComponent";
 import { MenuButton } from "./OrdersScreen";
+import { TRANSLATION } from "../global";
 
 export default function Upload({route, navigation}) {
     const uploadImage = async (uri)=>{
@@ -65,9 +66,12 @@ export default function Upload({route, navigation}) {
           fontWeight: "bold",
           padding: 10,
           color: "white"
-        }}>Take a Photo</Text>
+        }}>{TRANSLATION["Take a Photo"]}</Text>
       </View>
       </TouchableOpacity>
+      <TouchableOpacity  onPress={
+        ()=>openImagePickerAsync()
+      }> 
       <View style={{
         marginTop: 10,
         backgroundColor:"red",
@@ -80,8 +84,12 @@ export default function Upload({route, navigation}) {
           fontWeight: "bold",
           padding: 10,
           color: "white"
-        }}>Choose From Library</Text>
+        }}>{TRANSLATION["Choose From Library"]}</Text>
       </View>
+      </TouchableOpacity>
+      <TouchableOpacity  onPress={
+        ()=>bs.current.snapTo(2)
+      }> 
       <View style={{
         marginTop: 10,
         backgroundColor:"red",
@@ -95,8 +103,9 @@ export default function Upload({route, navigation}) {
           fontWeight: "bold",
           padding: 10,
           color: "white",
-        }}>Cancel</Text>
+        }}>{TRANSLATION.Cancel}</Text>
       </View>
+      </TouchableOpacity>
     </View>
   )
    const bs = useRef()

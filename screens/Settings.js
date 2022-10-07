@@ -30,7 +30,7 @@ export default function Upload({ route, navigation }) {
     updateDriverField(userData.driverId, {
       image : url
     }, url)
-    .then(()=>  bs.current.snapTo(2))
+    // .then(()=>  bs.current.snapTo(2))
   }
   let openImagePickerAsync = async () => {
     let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -64,7 +64,10 @@ export default function Upload({ route, navigation }) {
         }}>{TRANSLATION["Upload Photo"]}</Text>
       </View>
        <TouchableOpacity  onPress={
-        ()=>openImagePickerAsync()
+        ()=>{
+          openImagePickerAsync()
+          bs.current.snapTo(2)
+        }
       }> 
       <View style={{
         marginTop: 30,
@@ -82,7 +85,10 @@ export default function Upload({ route, navigation }) {
       </View>
       </TouchableOpacity>
       <TouchableOpacity  onPress={
-        ()=>openImagePickerAsync()
+        ()=>{
+          openImagePickerAsync()
+          bs.current.snapTo(2)
+        }
       }> 
       <View style={{
         marginTop: 10,

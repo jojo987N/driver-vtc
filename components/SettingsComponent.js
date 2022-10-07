@@ -26,9 +26,11 @@ export default function SettingsComponent({ navigation, bs }) {
       <View style={{flexDirection: "row"}}>
                     <Menu navigation={navigation} />
                 </View>
-
+      <View style={{flexDirection: "row"}}>
       <UploadImage bs={bs} defaultImage={require("../assets/images/image-profil.png")}/>
-      <View style={{
+      <UploadImage bs={bs} defaultImage={require("../assets/images/image-profil.png")}/>
+      </View>
+           <View style={{
         marginTop: 40, flex: 1
       }}>
         {/* <View style={{ marginHorizontal: 25 }}>

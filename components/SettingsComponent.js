@@ -128,7 +128,7 @@ const UploadCarImage = ({bs, defaultImage}) => {
       }>
         <Image
           // source={{ uri: restaurantData.image }}
-          source={userData.image?{uri: userData.image}:defaultImage}
+          source={userData.CarImage?{uri: userData.carImage}:defaultImage}
 
           style={{
             width: 100,

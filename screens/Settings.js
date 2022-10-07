@@ -10,7 +10,6 @@ import { Camera } from "expo-camera"
 import { updateProduct, updateRestaurant } from "../firebase"
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
 import SettingsComponent from "../components/SettingsComponent";
-import { RestaurantContext } from "../context/RestaurantContext";
 
 export default function Upload({ route, navigation }) {
   const { restaurantData, setRestaurantData } = useContext(RestaurantContext)

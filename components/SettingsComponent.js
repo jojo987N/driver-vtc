@@ -26,7 +26,7 @@ export default function SettingsComponent({ navigation, bs }) {
                     <Menu navigation={navigation} />
                 </View>
 
-      <UploadImage bs={bs} userData={userData} />
+      <UploadImage bs={bs}/>
       <View style={{
         marginTop: 40, flex: 1
       }}>
@@ -78,7 +78,9 @@ export default function SettingsComponent({ navigation, bs }) {
   )
 }
 
-const UploadImage = (bs, userData) => {
+const UploadImage = (bs) => {
+  const { setUserData, userData } = useContext(UserContext)
+
   return (
     <View style={{
       alignItems: "center",

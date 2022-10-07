@@ -78,7 +78,7 @@ export default function SettingsComponent({ navigation, bs }) {
   )
 }
 
-const UploadImage = (bs) => {
+const UploadImage = ({bs}) => {
   const { setUserData, userData } = useContext(UserContext)
 
   return (

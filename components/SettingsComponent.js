@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { ScrollView } from 'react-native-gesture-handler'
 // import SearchBar from './SearchBar'
 import { UserContext } from '../context/UserContext'
+import Menu from './Menu'
 
 export default function SettingsComponent({ navigation, bs }) {
   const { setUserData, userData } = useContext(UserContext)
@@ -24,7 +25,7 @@ export default function SettingsComponent({ navigation, bs }) {
       <View style={{flexDirection: "row"}}>
                     <Menu navigation={navigation} />
                 </View>
-                
+
       <View style={{
         alignItems: "center",
         marginTop: 20

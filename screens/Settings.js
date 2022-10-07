@@ -24,7 +24,7 @@ export default function Upload({ route, navigation }) {
     await uploadBytes(storageRef, blob)
     const url = await getDownloadURL(storageRef)
 
-    updateRestaurant(userData.driverId, url)
+    updateDriver(userData.driverId, url)
   }
   let openImagePickerAsync = async () => {
     let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();

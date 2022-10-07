@@ -10,11 +10,11 @@ import { UserContext } from '../context/UserContext'
 
 export default function SettingsComponent({ navigation, bs }) {
   const { setUserData, userData } = useContext(UserContext)
-  const [email, setEmail] = useState(restaurantData.email)
-  const [name, setName] = useState(restaurantData.name)
-  const [phone, setPhone] = useState(restaurantData.phone)
-  const [address, setAddress] = useState(restaurantData.address)
-  const [city, setCity] = useState(restaurantData.city)
+  const [email, setEmail] = useState(userData.email)
+  const [name, setName] = useState(userData.name)
+  const [phone, setPhone] = useState(userData.phone)
+  // const [address, setAddress] = useState(userData.address)
+  // const [city, setCity] = useState(restaurantData.city)
   return (
     <View style={{
       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,

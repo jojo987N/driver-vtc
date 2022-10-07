@@ -143,7 +143,8 @@ const UploadCarImage = ({bs, defaultImage}) => {
       </Pressable>
       <Text style={{
         fontSize: 8, fontWeight: "bold", color: "#3d5c5c",
-        letterSpacing: 5
+        letterSpacing: 5,
+        textAlign: "center"
       }}>{TRANSLATION['Upload Car']}</Text>
     </View>
   )

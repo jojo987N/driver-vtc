@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {Avatar, Icon} from 'react-native-elements'
 import {
     DrawerContentScrollView, 
@@ -15,11 +15,14 @@ import OrdersScreen from '../screens/OrdersScreen'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { signOut } from 'firebase/auth'
 import { auth } from '../firebase'
+import { UserContext } from '../context/UserContext'
 
 
 export default function DrawerContent(props) {
 
     const [isSignedIn, setIsSignedIn] = useState(true)
+   
+    const { setUserData, userData } = useContext(UserContext)
 
     
     const navigation = useNavigation()
@@ -48,7 +51,9 @@ export default function DrawerContent(props) {
                     rounded
                     avatarStyle={styles.avatar}
                     size={75}
-                    source={{uri: "https://www.shareicon.net/data/128x128/2016/04/10/747353_people_512x512.png"}}/>
+                    // source={{uri: "https://www.shareicon.net/data/128x128/2016/04/10/747353_people_512x512.png"}}
+                    source={userData.image?{uri: userData.image}:require("../assets/images/image-profil.png")}
+                    />
                 <View style={{marginLeft: 10}}>
                     <Text style={{
                         fontWeight: "bold",

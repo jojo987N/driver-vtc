@@ -109,7 +109,7 @@ const UploadImage = ({bs, defaultImage}) => {
       <Text style={{
         fontSize: 8, fontWeight: "bold", color: "#3d5c5c",
         letterSpacing: 5
-      }}>{TRANSLATION['Upload Profil']}</Text>
+      }}>{TRANSLATION.Upload}</Text>
     </View>
   )
 }
@@ -141,7 +141,7 @@ const UploadCarImage = ({bs, defaultImage}) => {
       <Text style={{
         fontSize: 8, fontWeight: "bold", color: "#3d5c5c",
         letterSpacing: 5
-      }}>{TRANSLATION['Upload Car']}</Text>
+      }}>{TRANSLATION.Upload}</Text>
     </View>
   )
 }

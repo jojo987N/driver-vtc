@@ -28,7 +28,7 @@ export default function SettingsComponent({ navigation, bs }) {
                 </View>
       <View style={{flexDirection: "row",  justifyContent: "space-between", marginHorizontal: 10}}>
       <UploadImage bs={bs} defaultImage={require("../assets/images/image-profil.png")}/>
-      <UploadImage bs={bs} defaultImage={require("../assets/images/berline-icon.png")}/>
+      <UploadCarImage bs={bs} defaultImage={require("../assets/images/berline-icon.png")}/>
       </View>
            <View style={{
         marginTop: 40, flex: 1
@@ -82,6 +82,38 @@ export default function SettingsComponent({ navigation, bs }) {
 }
 
 const UploadImage = ({bs, defaultImage}) => {
+  const { setUserData, userData } = useContext(UserContext)
+
+  return (
+    <View style={{
+      alignItems: "center",
+      marginTop: 20
+    }}>
+      <Pressable onPress={
+        () => {
+          bs.current.snapTo(0)
+        }
+      }>
+        <Image
+          // source={{ uri: restaurantData.image }}
+          source={userData.image?{uri: userData.image}:defaultImage}
+
+          style={{
+            width: 100,
+            height: 100,
+            overflow: 'hidden',
+            borderRadius: 100 / 2,
+          }}
+        />
+      </Pressable>
+      <Text style={{
+        fontSize: 15, fontWeight: "bold", color: "#3d5c5c",
+        letterSpacing: 5
+      }}>{TRANSLATION.Upload}</Text>
+    </View>
+  )
+}
+const UploadCarImage = ({bs, defaultImage}) => {
   const { setUserData, userData } = useContext(UserContext)
 
   return (

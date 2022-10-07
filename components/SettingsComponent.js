@@ -120,8 +120,8 @@ const UploadCarImage = ({bs, defaultImage}) => {
     <View style={{
       alignItems: "center",
       marginTop: 20,
-      width: 0,
-        flexGrow: 1,
+      width: 100,
+        // flexGrow: 1,
     }}>
       <Pressable onPress={
         () => {

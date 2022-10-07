@@ -27,7 +27,7 @@ export default function SettingsComponent({ navigation, bs }) {
                     <Menu navigation={navigation} />
                 </View>
 
-      <UploadImage bs={bs}/>
+      <UploadImage bs={bs} defaultImage={require("../assets/images/image-profil.png")}/>
       <View style={{
         marginTop: 40, flex: 1
       }}>
@@ -79,7 +79,7 @@ export default function SettingsComponent({ navigation, bs }) {
   )
 }
 
-const UploadImage = ({bs}) => {
+const UploadImage = ({bs, defaultImage}) => {
   const { setUserData, userData } = useContext(UserContext)
 
   return (
@@ -94,7 +94,7 @@ const UploadImage = ({bs}) => {
       }>
         <Image
           // source={{ uri: restaurantData.image }}
-          source={userData.image?{uri: userData.image}:require("../assets/images/image-profil.png")}
+          source={userData.image?{uri: userData.image}:defaultImage}
 
           style={{
             width: 100,

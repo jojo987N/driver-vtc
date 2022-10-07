@@ -23,10 +23,10 @@ export default function SettingsComponent({ navigation, bs }) {
       backgroundColor: "#e0ebeb",
       flex: 1
     }}>
-      <View style={{flexDirection: "row", justifyContent: "space-between"}}>
+      <View style={{flexDirection: "row"}}>
                     <Menu navigation={navigation} />
                 </View>
-      <View style={{flexDirection: "row"}}>
+      <View style={{flexDirection: "row",  justifyContent: "space-between"}}>
       <UploadImage bs={bs} defaultImage={require("../assets/images/image-profil.png")}/>
       <UploadImage bs={bs} defaultImage={require("../assets/images/image-profil.png")}/>
       </View>

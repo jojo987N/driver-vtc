@@ -26,32 +26,7 @@ export default function SettingsComponent({ navigation, bs }) {
                     <Menu navigation={navigation} />
                 </View>
 
-      <View style={{
-        alignItems: "center",
-        marginTop: 20
-      }}>
-        <Pressable onPress={
-          () => {
-            bs.current.snapTo(0)
-          }
-        }>
-          <Image
-            // source={{ uri: restaurantData.image }}
-            source={userData.image?{uri: userData.image}:require("../assets/images/image-profil.png")}
-
-            style={{
-              width: 100,
-              height: 100,
-              overflow: 'hidden',
-              borderRadius: 100 / 2,
-            }}
-          />
-        </Pressable>
-        <Text style={{
-          fontSize: 25, fontWeight: "bold", color: "#3d5c5c",
-          letterSpacing: 5
-        }}>Upload Image</Text>
-      </View>
+      
       <View style={{
         marginTop: 40, flex: 1
       }}>

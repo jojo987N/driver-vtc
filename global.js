@@ -34,7 +34,8 @@ export const APP_CONSTANT = {
 export const TRANSLATION = {
     "Take a Photo": "Prendre une Photo",
     "Choose From Library": "Choisir une image",
-    "Cancel": "Annuler"
+    "Cancel": "Annuler",
+    "Upload Photo": "Téléchargez une photo"
 }
 
 export const colors = {

@@ -49,7 +49,7 @@ export default function Upload({route, navigation}) {
           textAlign: "center",
           fontSize: 20,
           fontWeight: "bold"
-        }}>Upload Photo</Text>
+        }}>{TRANSLATION["Upload Photo"]}</Text>
       </View>
        <TouchableOpacity  onPress={
         ()=>openImagePickerAsync()

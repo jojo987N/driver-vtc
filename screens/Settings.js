@@ -12,6 +12,7 @@ import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
 import SettingsComponent from "../components/SettingsComponent";
 import { UserContext } from "../context/UserContext";
 import Menu from "../components/Menu";
+import { TRANSLATION } from "../global";
 
 export default function Upload({ route, navigation }) {
   const { setUserData, userData } = useContext(UserContext)

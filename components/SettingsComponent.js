@@ -107,9 +107,9 @@ const UploadImage = ({bs, defaultImage}) => {
         />
       </Pressable>
       <Text style={{
-        fontSize: 15, fontWeight: "bold", color: "#3d5c5c",
+        fontSize: 8, fontWeight: "bold", color: "#3d5c5c",
         letterSpacing: 5
-      }}>{TRANSLATION.Upload}</Text>
+      }}>{TRANSLATION['Upload Profil']}</Text>
     </View>
   )
 }
@@ -139,9 +139,9 @@ const UploadCarImage = ({bs, defaultImage}) => {
         />
       </Pressable>
       <Text style={{
-        fontSize: 15, fontWeight: "bold", color: "#3d5c5c",
+        fontSize: 8, fontWeight: "bold", color: "#3d5c5c",
         letterSpacing: 5
-      }}>{TRANSLATION.Upload}</Text>
+      }}>{TRANSLATION['Upload Car']}</Text>
     </View>
   )
 }

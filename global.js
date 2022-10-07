@@ -36,7 +36,8 @@ export const TRANSLATION = {
     "Choose From Library": "Choisir une image",
     "Cancel": "Annuler",
     "Upload Photo": "Téléchargez une photo",
-    "Upload": "Téléchargez"
+    "Upload Profil": "Téléchargez photo profil",
+    "Upload Car": "Téléchargez photo véhicule", 
 }
 
 export const colors = {

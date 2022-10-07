@@ -58,11 +58,11 @@ export default function DrawerContent(props) {
                     <Text style={{
                         fontWeight: "bold",
                         fontSize: 18,
-                    }}>Paul Son</Text>
+                    }}>{userData.name}</Text>
 
                     <Text style={{
                         fontSize: 14,
-                    }}>driver@goodfood.com</Text>
+                    }}>{userData.email}</Text>
                 </View>
             </View>
              

@@ -17,7 +17,10 @@ export default function RootNavigation() {
   return (
     <NavigationContainer>
       <UserContext.Provider value={{ userData, setUserData }}>
-        <StripeProvider publishableKey="pk_test_IvI4y9lJ7FvJR4sPtn1khdkV">
+        <StripeProvider 
+        // publishableKey="pk_test_IvI4y9lJ7FvJR4sPtn1khdkV"
+        publishableKey="pk_live_shTsetOzwZIg6LurthonKOwZ"
+        >
           <Stack.Navigator>
 
             <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} />

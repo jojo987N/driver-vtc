@@ -107,7 +107,7 @@ const UploadImage = ({bs, defaultImage}) => {
         />
       </Pressable>
       <Text style={{
-        fontSize: 25, fontWeight: "bold", color: "#3d5c5c",
+        fontSize: 15, fontWeight: "bold", color: "#3d5c5c",
         letterSpacing: 5
       }}>{TRANSLATION.Upload}</Text>
     </View>

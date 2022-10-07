@@ -5,7 +5,7 @@ import { auth, getDriverInfos, updateRestaurantInfos } from '../firebase'
 import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { ScrollView } from 'react-native-gesture-handler'
-import SearchBar from './SearchBar'
+// import SearchBar from './SearchBar'
 import { UserContext } from '../context/UserContext'
 
 export default function SettingsComponent({ navigation, bs }) {
@@ -48,10 +48,10 @@ export default function SettingsComponent({ navigation, bs }) {
       <View style={{
         marginTop: 40, flex: 1
       }}>
-        <View style={{ marginHorizontal: 25 }}>
+        {/* <View style={{ marginHorizontal: 25 }}>
           <SearchBar style={{ backgroundColor: "white", borderBottomColor: "grey", borderBottomWidth: 0.3 }}
             setAddress={setAddress} setCity={setCity}/>
-        </View>
+        </View> */}
         <ScrollView>
           <View style={styles.textInputContainer}>
             <MaterialIcons name="person" size={20} color="#3d5c5c" style={{

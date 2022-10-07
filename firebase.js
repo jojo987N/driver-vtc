@@ -198,3 +198,11 @@ export const updateDriver = (driver_id, image) => {
   })
     .then(() => console.log('good'))
 }
+
+export const updateDriverField = (driver_id, obj) => {
+  const docRef = doc(db, 'drivers', driver_id)
+  updateDoc(docRef, {
+    [Object.keys(obj)[0]]: image,
+  })
+    .then(() => console.log('good'))
+}

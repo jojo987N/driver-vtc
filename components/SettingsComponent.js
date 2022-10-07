@@ -31,7 +31,9 @@ export default function SettingsComponent({ navigation, bs }) {
           }
         }>
           <Image
-            source={{ uri: restaurantData.image }}
+            // source={{ uri: restaurantData.image }}
+            source={userData.image?{uri: userData.image}:require("../assets/images/image-profil.png")}
+
             style={{
               width: 100,
               height: 100,

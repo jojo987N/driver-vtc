@@ -187,6 +187,6 @@ const getOrderMultipleItems = () => {
 export const getDriverInfos = () => {
   const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
   return getDocs(q).then(snapshot => {
-    return snapshot.docs.map((doc) => doc.data())
+    return snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
   })
 }

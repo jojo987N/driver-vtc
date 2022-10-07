@@ -20,7 +20,7 @@ export default function SignIn({navigation}) {
     const re = await signInWithEmailAndPassword(auth, email, password)
       getDriverInfos().then(docs => {
         AsyncStorage.setItem('driverData', JSON.stringify({...docs[0], email: re.user.email}))
-          setUserData({driverId: snapshot.docs[0].id,...docs[0], email: re.user.email})
+          setUserData({...docs[0], email: re.user.email})
           setLoading(false)
           navigation.navigate('DrawerNavigator')
       })

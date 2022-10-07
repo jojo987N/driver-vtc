@@ -23,7 +23,7 @@ export default function SettingsComponent({ navigation, bs }) {
       backgroundColor: "#e0ebeb",
       flex: 1
     }}>
-      <View style={{flexDirection: "row"}}>
+      <View style={{flexDirection: "row", justifyContent: "space-between"}}>
                     <Menu navigation={navigation} />
                 </View>
       <View style={{flexDirection: "row"}}>

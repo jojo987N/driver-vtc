@@ -11,6 +11,7 @@ import { updateProduct, updateRestaurant } from "../firebase"
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
 import SettingsComponent from "../components/SettingsComponent";
 import { UserContext } from "../context/UserContext";
+import Menu from "../components/Menu";
 
 export default function Upload({ route, navigation }) {
   const { setUserData, userData } = useContext(UserContext)
@@ -115,6 +116,9 @@ export default function Upload({ route, navigation }) {
       flex: 1,
       alignItems: "center",
     }}>
+      <View style={{flexDirection: "row"}}>
+                    <Menu navigation={navigation} />
+                </View>
       <BottomSheet
         ref={bs}
         snapPoints={["47%", "90%", 0]}

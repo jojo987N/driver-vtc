@@ -16,6 +16,8 @@ import { TRANSLATION } from "../global";
 
 export default function Upload({ route, navigation }) {
   const { setUserData, userData } = useContext(UserContext)
+  const bs = useRef()
+
   const uploadImage = async (uri) => {
     const response = await fetch(uri)
     const blob = await response.blob()
@@ -28,6 +30,7 @@ export default function Upload({ route, navigation }) {
     updateDriverField(userData.driverId, {
       image : url
     }, url)
+    .then(()=>  bs.current.snapTo(2))
   }
   let openImagePickerAsync = async () => {
     let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -117,7 +120,7 @@ export default function Upload({ route, navigation }) {
       </TouchableOpacity>
     </View>
   )
-  const bs = useRef()
+  
   useEffect(() => {
     setTimeout(() => {
       bs.current.snapTo(2)

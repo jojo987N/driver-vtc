@@ -39,69 +39,77 @@ export default function Upload({ route, navigation }) {
       image: pickerResult.uri
     })
   }
-  const renderContent = () => (
+  const renderContent = ()=>(
     <View style={{
       backgroundColor: "white",
       borderTopLeftRadius: 20,
       borderTopRightRadius: 20,
       elevation: 5,
     }}>
-      <View style={{
+        <View style={{
         marginTop: 30
-      }}>
+      }}> 
         <Text style={{
           textAlign: "center",
           fontSize: 20,
           fontWeight: "bold"
-        }}>Upload Photo</Text>
+        }}>{TRANSLATION["Upload Photo"]}</Text>
       </View>
-      <TouchableOpacity onPress={
-        () => openImagePickerAsync()
-      }>
-        <View style={{
-          marginTop: 30,
-          backgroundColor: "red",
-          marginHorizontal: 20,
-          borderRadius: 10
-        }}>
-          <Text style={{
-            textAlign: "center",
-            fontSize: 15,
-            fontWeight: "bold",
-            padding: 10,
-            color: "white"
-          }}>Take a Photo</Text>
-        </View>
-      </TouchableOpacity>
+       <TouchableOpacity  onPress={
+        ()=>openImagePickerAsync()
+      }> 
       <View style={{
-        marginTop: 10,
-        backgroundColor: "red",
+        marginTop: 30,
+        backgroundColor:"red",
         marginHorizontal: 20,
         borderRadius: 10
-      }}>
+      }}> 
         <Text style={{
           textAlign: "center",
           fontSize: 15,
           fontWeight: "bold",
           padding: 10,
           color: "white"
-        }}>Choose From Library</Text>
+        }}>{TRANSLATION["Take a Photo"]}</Text>
       </View>
+      </TouchableOpacity>
+      <TouchableOpacity  onPress={
+        ()=>openImagePickerAsync()
+      }> 
       <View style={{
         marginTop: 10,
-        backgroundColor: "red",
+        backgroundColor:"red",
+        marginHorizontal: 20,
+        borderRadius: 10
+      }}> 
+        <Text style={{
+          textAlign: "center",
+          fontSize: 15,
+          fontWeight: "bold",
+          padding: 10,
+          color: "white"
+        }}>{TRANSLATION["Choose From Library"]}</Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity  onPress={
+        ()=>bs.current.snapTo(2)
+      }> 
+      <View style={{
+        marginTop: 10,
+        backgroundColor:"red",
         marginHorizontal: 20,
         borderRadius: 10,
         marginBottom: 20
-      }}>
+      }}> 
         <Text style={{
           textAlign: "center",
           fontSize: 15,
           fontWeight: "bold",
           padding: 10,
           color: "white",
-        }}>Cancel</Text>
+        }}>{TRANSLATION.Cancel}</Text>
       </View>
+      </TouchableOpacity>
     </View>
   )
   const bs = useRef()

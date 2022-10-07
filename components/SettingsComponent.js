@@ -21,6 +21,10 @@ export default function SettingsComponent({ navigation, bs }) {
       backgroundColor: "#e0ebeb",
       flex: 1
     }}>
+      <View style={{flexDirection: "row"}}>
+                    <Menu navigation={navigation} />
+                </View>
+                
       <View style={{
         alignItems: "center",
         marginTop: 20

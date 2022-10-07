@@ -125,9 +125,7 @@ export default function Upload({ route, navigation }) {
       {/* <View style={{
       }}>
       </View> */}
-       <View style={{flexDirection: "row"}}>
-                    <Menu navigation={navigation} />
-                </View>
+       
      
       <SettingsComponent bs={bs} />
     </GestureHandlerRootView>

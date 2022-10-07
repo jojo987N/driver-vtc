@@ -127,7 +127,7 @@ export default function Upload({ route, navigation }) {
       </View> */}
        
      
-      <SettingsComponent bs={bs} />
+      <SettingsComponent bs={bs} navigation={navigation}/>
     </GestureHandlerRootView>
   );
 }

@@ -26,7 +26,7 @@ export default function SettingsComponent({ navigation, bs }) {
       <View style={{flexDirection: "row"}}>
                     <Menu navigation={navigation} />
                 </View>
-      <View style={{flexDirection: "row",  justifyContent: "space-between"}}>
+      <View style={{flexDirection: "row",  justifyContent: "space-between", marginHorizontal: 10}}>
       <UploadImage bs={bs} defaultImage={require("../assets/images/image-profil.png")}/>
       <UploadImage bs={bs} defaultImage={require("../assets/images/image-profil.png")}/>
       </View>

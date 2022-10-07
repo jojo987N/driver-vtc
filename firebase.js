@@ -190,3 +190,11 @@ export const getDriverInfos = () => {
     return snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
   })
 }
+
+export const updateDriver = (driver_id, image) => {
+  const docRef = doc(db, 'drivers', driver_id)
+  updateDoc(docRef, {
+    image: image,
+  })
+    .then(() => console.log('good'))
+}

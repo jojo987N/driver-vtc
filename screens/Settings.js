@@ -128,9 +128,9 @@ export default function Upload({ route, navigation }) {
   )
   
   useEffect(() => {
-    setTimeout(() => {
-      bs.current.snapTo(2)
-    }, 2000)
+    // setTimeout(() => {
+    //   bs.current.snapTo(2)
+    // }, 2000)
   }, [])
   return (
     <GestureHandlerRootView style={{

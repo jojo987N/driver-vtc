@@ -19,6 +19,7 @@ export default function SettingsComponent({ navigation, bs }) {
   const [address, setAddress] = useState(userData.address)
   const [city, setCity] = useState(userData.city)
   const [postalCode, setPostalCode] = useState(userData.postalcode)
+  const [carNumber, setCarNumber] = useState(userData.carNumber)
   // const [address, setAddress] = useState(userData.address)
   // const [city, setCity] = useState(restaurantData.city)
   return (
@@ -111,11 +112,23 @@ export default function SettingsComponent({ navigation, bs }) {
               marginLeft: 6,
             }} />
             <TextInput
-              placeholder='Phone'
+              placeholder='Téléphone'
               value={phone}
               onChangeText={(text) => setPhone(text)}
               style={styles.textInput} />
           </View>
+
+          <View style={styles.textInputContainer}>
+            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+              marginLeft: 6,
+            }} />
+            <TextInput
+              placeholder="Numéro d'immatriculation"
+              value={carNumber}
+              onChangeText={(text) => setCarNumber(text)}
+              style={styles.textInput} />
+          </View>
+
           <TouchableOpacity onPress={() => {
             updateRestaurantInfos(restaurantData, email, name, phone, address, city, setRestaurantData)
           }}>

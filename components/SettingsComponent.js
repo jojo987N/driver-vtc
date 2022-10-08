@@ -91,8 +91,8 @@ const UploadImage = ({bs, defaultImage}) => {
       width: 150,
     }}>
       <Pressable onPress={
-        (a) => {
-          console.log(bs.current)
+        () => {
+          // console.log(bs.current)
           bs.current.snapTo(0)
         }
       }>

@@ -128,6 +128,7 @@ export default function Upload({ route, navigation }) {
   )
   
   useEffect(() => {
+    bs.current.snapTo(2)
     // setTimeout(() => {
     //   bs.current.snapTo(2)
     // }, 2000)
@@ -142,7 +143,7 @@ export default function Upload({ route, navigation }) {
       <BottomSheet
         ref={bs}
         // snapPoints={["47%", "90%", 0]}
-        snapPoints={["0%", "90%", 0]}
+        snapPoints={["47%", "90%", 0]}
         renderContent={renderContent}
       />
       {/* <View style={{

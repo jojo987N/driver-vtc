@@ -36,7 +36,7 @@ export const TRANSLATION = {
     "Choose From Library": "Choisir une image",
     "Cancel": "Annuler",
     "Upload Photo": "Téléchargez une photo",
-    "Upload Profil": "Téléchargez photo profil",
+    "Upload Profil": "Téléchargez une photo profil",
     "Upload Car": "Téléchargez photo véhicule", 
 }
 

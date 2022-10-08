@@ -15,6 +15,10 @@ export default function SettingsComponent({ navigation, bs }) {
   const [email, setEmail] = useState(userData.email)
   const [name, setName] = useState(userData.name)
   const [phone, setPhone] = useState(userData.phone)
+  const [lastName, setLastName] = useState(userData.lastName)
+  const [address, setAddress] = useState(userData.address)
+  const [city, setCity] = useState(userData.city)
+  const [postalCode, setPostalCode] = useState(userData.postalcode)
   // const [address, setAddress] = useState(userData.address)
   // const [city, setCity] = useState(restaurantData.city)
   return (
@@ -53,11 +57,55 @@ export default function SettingsComponent({ navigation, bs }) {
               marginLeft: 6,
             }} />
             <TextInput
-              placeholder='Name'
+              placeholder='Nom'
               value={name}
               onChangeText={(text) => setName(text)}
               style={styles.textInput} />
           </View>
+
+          <View style={styles.textInputContainer}>
+            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+              marginLeft: 6,
+            }} />
+            <TextInput
+              placeholder='Prénom'
+              value={lastName}
+              onChangeText={(text) => setLastName(text)}
+              style={styles.textInput} />
+          </View>
+
+          <View style={styles.textInputContainer}>
+            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+              marginLeft: 6,
+            }} />
+            <TextInput
+              placeholder='Adresse'
+              value={address}
+              onChangeText={(text) => setAddres(text)}
+              style={styles.textInput} />
+          </View>
+
+          <View style={styles.textInputContainer}>
+            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+              marginLeft: 6,
+            }} />
+            <TextInput
+              placeholder='Ville'
+              value={city}
+              onChangeText={(text) => setCity(text)}
+              style={styles.textInput} />
+          </View>
+          <View style={styles.textInputContainer}>
+            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+              marginLeft: 6,
+            }} />
+          <TextInput
+              placeholder='Code Postal'
+              value={postalCode}
+              onChangeText={(text) => setPostalCode(text)}
+              style={styles.textInput} />
+          </View>
+
           <View style={styles.textInputContainer}>
             <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
               marginLeft: 6,

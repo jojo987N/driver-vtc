@@ -141,7 +141,8 @@ export default function Upload({ route, navigation }) {
       
       <BottomSheet
         ref={bs}
-        snapPoints={["47%", "90%", 0]}
+        // snapPoints={["47%", "90%", 0]}
+        snapPoints={["0%", "90%", 0]}
         renderContent={renderContent}
       />
       {/* <View style={{

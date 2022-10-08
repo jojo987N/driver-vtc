@@ -53,7 +53,7 @@ export default function OrdersScreen({ route, navigation }) {
   const { width, height } = useWindowDimensions();
   const [opacity, setOpacity] = useState(0.9);
   const [showOrderCountDown, setShowOrderCountDown] = useState(false);
-  const [bottomSheetHeight, setBottomSheetHeight] = useState("10%");
+  const [bottomSheetHeight, setBottomSheetHeight] = useState("89%");
   const [mapdirection, setMapdirection] = useState(false);
   const [totalMinutes, setTotalMinutes] = useState(0);
   const [order, setOrder] = useState({});

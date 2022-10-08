@@ -87,7 +87,7 @@ export default function DrawerNavigator() {
                 )
             }}
         />
-        <Drawer.Screen 
+        {/* <Drawer.Screen 
             name = "Orders Picked Up"
             initialParams={{status: "PICKED_UP"}}
             component={OrdersScreen}
@@ -100,7 +100,7 @@ export default function DrawerNavigator() {
                   color={focussed} />
                 )
             }}
-        />
+        /> */}
 
       <Drawer.Screen 
             name = "Orders Completed"
@@ -129,7 +129,7 @@ export default function DrawerNavigator() {
                 )
             }}
         />
-      <Drawer.Screen 
+      {/* <Drawer.Screen 
             name = "My Location"
             initialParams={{myLocation: true}}
             component={OrdersScreen}
@@ -142,7 +142,7 @@ export default function DrawerNavigator() {
                   color={focussed} />
                 )
             }}
-        />
+        /> */}
 
 <Drawer.Screen 
             name = "Recharge"
@@ -160,7 +160,7 @@ export default function DrawerNavigator() {
         />
 
     <Drawer.Screen 
-            name = "Settings"
+            name = "Profil"
             
             component={Settings}
             options={{

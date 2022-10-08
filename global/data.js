@@ -55,16 +55,24 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons} from "@expo/vector-icons"
         color: "black"
       }
     },
+    // {
+    //   label: "My Location",
+    //   icon: {
+    //     type: Entypo,
+    //     name: "location",
+    //     size: 24,
+    //     color: "black"
+    //   }
+    // },
     {
-      label: "My Location",
+      label: "Recharge",
       icon: {
-        type: Entypo,
-        name: "location",
+        type: FontAwesome,
+        name: "money",
         size: 24,
         color: "black"
       }
     },
-   
 ]
 
 

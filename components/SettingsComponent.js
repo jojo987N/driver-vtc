@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, StatusBar, Image, TextInput, StyleSheet, TouchableOpacity, Pressable } from 'react-native'
 import React, { useState, useEffect, useContext } from 'react'
 import { Entypo, FontAwesome5, MaterialIcons } from '@expo/vector-icons'
-import { auth, getDriverInfos, updateRestaurantInfos } from '../firebase'
+import { auth, getDriverInfos, updateDriverInfos, updateRestaurantInfos } from '../firebase'
 import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { ScrollView } from 'react-native-gesture-handler'

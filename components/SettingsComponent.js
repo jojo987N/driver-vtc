@@ -82,7 +82,7 @@ export default function SettingsComponent({ navigation, bs }) {
             <TextInput
               placeholder='Adresse'
               value={address}
-              onChangeText={(text) => setAddres(text)}
+              onChangeText={(text) => setAddress(text)}
               style={styles.textInput} />
           </View>
 

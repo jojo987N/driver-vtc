@@ -92,7 +92,7 @@ const UploadImage = ({bs, defaultImage}) => {
     }}>
       <Pressable onPress={
         (a) => {
-          console.log('a : ', a)
+          console.log('a : ', a.target)
           bs.current.snapTo(0)
         }
       }>

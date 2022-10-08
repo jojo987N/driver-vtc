@@ -51,7 +51,8 @@ export default function SettingsComponent({ navigation, bs }) {
               placeholder='Email'
               value={email}
               onChangeText={(text) => setEmail(text)}
-              style={styles.textInput} />
+              style={styles.textInput} 
+              editable = {false}/>
           </View>
           <View style={styles.textInputContainer}>
             <MaterialIcons name="person" size={20} color="#3d5c5c" style={{

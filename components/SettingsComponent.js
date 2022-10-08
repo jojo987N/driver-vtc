@@ -130,7 +130,7 @@ export default function SettingsComponent({ navigation, bs }) {
           </View>
 
           <TouchableOpacity onPress={() => {
-            updateRestaurantInfos(restaurantData, email, name, phone, address, city, setRestaurantData)
+            updateDriverInfos(userData, email, name, lastName, address, city, postalCode, phone, carNumber, setUserData)
           }}>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Update</Text>

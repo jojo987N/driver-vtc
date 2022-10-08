@@ -215,3 +215,25 @@ export const updateDriverField = (driver_id, obj) => {
   })
     // .then(() => console.log('good'))
 }
+
+export const updateDriverInfos = (userData, email, name, lastName, address, city, postalCode, phone, carNumber, setUserData) => {
+  const docRef = doc(db, 'drivers', userData.id)
+  const data = {
+    email,
+    name,
+    lastName,
+    phone,
+    address: address.description,
+    lat: address.location.lat,
+    lng: address.location.lng,
+    city,
+    postalCode,
+    carNumber,
+    updatedAt: serverTimestamp()
+  }
+  return updateDoc(docRef, data)
+    .then(() => setUserData({
+      ...userData,
+      ...data
+    }))
+}

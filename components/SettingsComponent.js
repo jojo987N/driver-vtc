@@ -115,7 +115,8 @@ export default function SettingsComponent({ navigation, bs }) {
               placeholder='Téléphone'
               value={phone}
               onChangeText={(text) => setPhone(text)}
-              style={styles.textInput} />
+              style={styles.textInput} 
+              editable = {false}/>
           </View>
 
           <View style={styles.textInputContainer}>

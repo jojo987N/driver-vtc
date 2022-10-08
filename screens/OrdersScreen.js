@@ -145,8 +145,7 @@ export default function OrdersScreen({ route, navigation }) {
   if (!location) return <Loading />;
   
   if(location) 
-  if(bottomSheet)
-  bottomSheet?.current.collapse()
+  setBottomSheetHeight("0%")
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>

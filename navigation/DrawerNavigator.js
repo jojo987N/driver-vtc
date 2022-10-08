@@ -160,11 +160,11 @@ export default function DrawerNavigator() {
         />
 
     <Drawer.Screen 
-            name = "Profil"
+            name = "Settings"
             
             component={Settings}
             options={{
-                title: "Settings",
+                title: "Profil",
                 drawerIcon: ({focussed, size}) =>(
                   <Icon 
                   type="material-community"

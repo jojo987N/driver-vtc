@@ -27,7 +27,7 @@ export default function DrawerNavigator() {
             initialParams={{dashboard: "dashboard"}}
             component={OrdersScreen}
             options={{
-                title: "Home",
+                title: "Accueil",
                 drawerIcon: ({focussed, size}) =>(
                   <Icon 
                   type="material-community"
@@ -46,7 +46,7 @@ export default function DrawerNavigator() {
             initialParams={{status: "history"}}
             component={OrdersScreen}
             options={{
-                title: "History",
+                title: "Historique",
                 drawerIcon: ({focussed, size}) =>(
                   <Icon 
                         type="material-community"
@@ -63,7 +63,7 @@ export default function DrawerNavigator() {
             initialParams={{status: "ACCEPTED"}}
             component={OrdersScreen}
             options={{
-                title: "Orders Confirmed",
+                title: "Courses Confirmées",
                 drawerIcon: ({focussed, size}) =>(
                   <MaterialIcons 
                   name="confirmation-num" 
@@ -78,7 +78,7 @@ export default function DrawerNavigator() {
             initialParams={{status: "STARTED"}}
             component={OrdersScreen}
             options={{
-                title: "Orders Started",
+                title: "Trajet en Cours",
                 drawerIcon: ({focussed, size}) =>(
                   <FontAwesome 
                   name="hourglass-start" 
@@ -107,7 +107,7 @@ export default function DrawerNavigator() {
             initialParams={{status: "Completed"}}
             component={OrdersScreen}
             options={{
-                title: "Orders Completed",
+                title: "Courses Terminées",
                 drawerIcon: ({focussed, size}) =>(
                   <AntDesign name="checkcircle" 
                   size={size} color={focussed} />
@@ -115,7 +115,7 @@ export default function DrawerNavigator() {
             }}
         />
 
-      <Drawer.Screen 
+      {/* <Drawer.Screen 
             name = "Orders Canceled"
             initialParams={{status: "CANCELED"}}
             component={OrdersScreen}
@@ -128,7 +128,7 @@ export default function DrawerNavigator() {
                   color={focussed} />
                 )
             }}
-        />
+        /> */}
       {/* <Drawer.Screen 
             name = "My Location"
             initialParams={{myLocation: true}}

@@ -23,7 +23,7 @@ export default function Wallet({ navigation }) {
         const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
         onSnapshot(q, (snapshot) => {
 
-           setAmount(snapshot.docs[0].data().wallet)
+           setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
         })
 
     }, [])

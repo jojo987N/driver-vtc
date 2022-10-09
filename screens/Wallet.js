@@ -14,17 +14,17 @@ import Menu from '../components/Menu'
 
 
 export default function Wallet({ navigation }) {
-
+    const { userData, setUserData } = useContext(UserContext);
     const stripe = useStripe();
     const [modalVisible, setModalVisible] = useState(false)
     const [amount, setAmount] = useState(0.00)
 
     useEffect(()=> {
-        // const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
-        // onSnapshot(q, (snapshot) => {
+        const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
+        onSnapshot(q, (snapshot) => {
 
-        //    setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
-        // })
+           setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
+        })
 
     }, [])
     return (

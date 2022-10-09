@@ -52,12 +52,12 @@ export default function SignIn({navigation}) {
   
       onSnapshot(q, (snapshot) => {
         datas = snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
-        setUserData({...datas[0], email: re.user.email})
+        setUserData({...datas[0], email: user.email})
         // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
         // console.log(datas)
         
       });
-      
+
       if(userData){
         setLoading(false)
       navigation.navigate('DrawerNavigator')

@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, StatusBar, Image, TextInput, StyleSheet, TouchableOpacity} from 'react-native'
 import React, {useState, useEffect, useContext} from 'react'
 import { MaterialIcons } from '@expo/vector-icons'
-import { auth, getDriverInfos} from '../../firebase'
+import { auth, driversCol, getDriverInfos} from '../../firebase'
 import { signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { UserContext } from '../../context/UserContext'
@@ -24,6 +24,7 @@ export default function SignIn({navigation}) {
     try {
     const re = await signInWithEmailAndPassword(auth, email, password)
     let datas;
+    const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
 
     onSnapshot(q, (snapshot) => {
       datas = snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )

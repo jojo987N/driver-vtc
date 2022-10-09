@@ -24,7 +24,16 @@ export default function SignIn({navigation}) {
     setLoading(true)
     try {
     const re = await signInWithEmailAndPassword(auth, email, password)
-     
+    let datas;
+    const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
+
+    onSnapshot(q, (snapshot) => {
+      datas = snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
+      setUserData({...datas[0], email: re.user.email})
+      // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
+      // console.log(datas)
+      
+    });
 
 
 
@@ -47,17 +56,6 @@ export default function SignIn({navigation}) {
    onAuthStateChanged(auth, (user) => {
      //console.log(user)
      if (user) {
-      let datas;
-      const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
-  
-      onSnapshot(q, (snapshot) => {
-        datas = snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
-        setUserData({...datas[0], email: user.email})
-        // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
-        // console.log(datas)
-        
-      });
-
       if(userData){
         setLoading(false)
       navigation.navigate('DrawerNavigator')

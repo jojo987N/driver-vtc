@@ -31,6 +31,10 @@ export default function SignIn({navigation}) {
       setUserData({...datas[0], email: re.user.email})
       // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
       // console.log(datas)
+      if(userData){
+        setLoading(false)
+      navigation.navigate('DrawerNavigator')
+      }
     });
 
 

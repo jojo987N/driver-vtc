@@ -1,77 +1,44 @@
 import { View, Text, SafeAreaView, StatusBar, Image, TextInput, StyleSheet, TouchableOpacity} from 'react-native'
 import React, {useState, useEffect, useContext} from 'react'
 import { MaterialIcons } from '@expo/vector-icons'
-import { auth, driversCol, getDriverInfos} from '../../firebase'
+import { auth, getDriverInfos} from '../../firebase'
 import { signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { UserContext } from '../../context/UserContext'
 import Loading from '../../components/Loading'
 import * as Animatable from "react-native-animatable"
 import { LinearGradient } from 'expo-linear-gradient'
-import {
-  addDoc, getFirestore, collection, getDocs, doc,
-  deleteDoc, orderBy, query, limit, serverTimestamp, onSnapshot,
-  updateDoc, where
-} from 'firebase/firestore'
 
 export default function SignIn({navigation}) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
-  const {userData, setUserData} = useContext(UserContext)
-  
+  const {setUserData} = useContext(UserContext)
   const SignInUser = async ()=>{
     setLoading(true)
     try {
     const re = await signInWithEmailAndPassword(auth, email, password)
-    let datas;
-    const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
-
-    onSnapshot(q, (snapshot) => {
-      datas = snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
-      setUserData({...datas[0], email: re.user.email})
-      // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
-      // console.log(datas)
-      
-    });
-
-
-
-
-      // getDriverInfos(setUserData, re).then(docs => {
-      //   // AsyncStorage.setItem('driverData', JSON.stringify({...docs[0], email: re.user.email}))
-      //     // setUserData({...docs[0], email: re.user.email})
-      //     if(userData){
-      //       setLoading(false)
-      //     navigation.navigate('DrawerNavigator')
-      //     }
-          
-      //  })
+      getDriverInfos().then(docs => {
+        AsyncStorage.setItem('driverData', JSON.stringify({...docs[0], email: re.user.email}))
+          setUserData({...docs[0], email: re.user.email})
+          setLoading(false)
+          navigation.navigate('DrawerNavigator')
+      })
     }catch(e){
       console.log(e)
       setLoading(false)
   }
 }
- useEffect(() => {
-   onAuthStateChanged(auth, (user) => {
-     //console.log(user)
-     if (user) {
-      if(userData){
-        setLoading(false)
-      navigation.navigate('DrawerNavigator')
-      }
-      //  navigation.navigate("DrawerNavigator");
-     }
-   });
-   //   AsyncStorage.getItem("driverData")
-   //   .then((value)=>{
-   //     if(value){
-   //       let driverData = JSON.parse(value)
-   //       setUserData(driverData)
-   //       navigation.navigate('DrawerNavigator')
-   //     }
-   //   })
- }, []);
+// useEffect(()=>{
+//   AsyncStorage.getItem("driverData")
+//   .then((value)=>{
+//     if(value){
+//       let driverData = JSON.parse(value)
+//       setUserData(driverData)
+//       navigation.navigate('DrawerNavigator')
+//     }
+//   })
+// }, [])
 if(loading)
 return <Loading />
   return (

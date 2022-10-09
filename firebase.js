@@ -193,25 +193,11 @@ const getOrderMultipleItems = () => {
     })
   })
 }
-// export const getDriverInfos = () => {
-//   const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
-//   return getDocs(q).then(snapshot => {
-//     return snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
-//   })
-// }
-
-export const getDriverInfos = async (setUserData, re) => {
-  let datas;
+export const getDriverInfos = () => {
   const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
-
-  onSnapshot(q, (snapshot) => {
-    datas = snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
-    setUserData({...datas[0], email: re.user.email})
-    // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
-    console.log(datas)
-  });
-   
-  //  return datas;
+  return getDocs(q).then(snapshot => {
+    return snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
+  })
 }
 
 export const updateDriver = (driver_id, image) => {

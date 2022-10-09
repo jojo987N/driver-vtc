@@ -34,7 +34,7 @@ import {
   where,
   getDocs,
 } from "firebase/firestore";
-import { apiKey, currency, currencySymbol, RADIUS } from "../global";
+import { apiKey, currency, currencySymbol, language, RADIUS } from "../global";
 import LottieView from "lottie-react-native";
 import { APP_CONSTANT } from "../global";
 import OnlineOffLine from "../components/ordersScreen/OnlineOffLine";

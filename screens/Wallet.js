@@ -14,7 +14,6 @@ import Menu from '../components/Menu'
 
 
 export default function Wallet({ navigation }) {
-    const { userData, setUserData } = useContext(UserContext);
     const stripe = useStripe();
     const [modalVisible, setModalVisible] = useState(false)
     const [amount, setAmount] = useState(0.00)

@@ -48,7 +48,7 @@ import Loading from "../components/Loading";
 import { getDistanceFromLatLonInKm } from "../utils";
 
 export default function OrdersScreen({ route, navigation }) {
-  const { userData } = useContext(UserContext);
+  const { userData, setUserData } = useContext(UserContext);
   const bottomSheet = useRef(null);
   const { width, height } = useWindowDimensions();
   const [opacity, setOpacity] = useState(0.9);
@@ -68,6 +68,11 @@ export default function OrdersScreen({ route, navigation }) {
     const q = query(driversCol, where("id", "==", userData.id));
     onSnapshot(q, (snapshot) => {
       setOnOffline(snapshot.docs[0].data().onOff);
+      if(snapshot.docs[0].data().wallet)
+      setUserData({
+        ...userData,
+        wallet: snapshot.docs[0].data().wallet
+      })
       // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
     });
   };

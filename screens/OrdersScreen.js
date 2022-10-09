@@ -284,7 +284,7 @@ const Earnings = () => {
         }}>{currency}</Text> 0.00 </Text> */}
       <View style={{ flexDirection: "row", justifyContent: "space-around", padding: 10, paddingHorizontal: 20, alignItems: "center"}}>
         <Text style={{ fontSize: 18, color: "white", paddingRight: 10}}>Votre crédit: </Text>
-        <Text style={{ color: "#1a8cff", fontSize: 25 }}>{currencySymbol}</Text>
+        <Text style={{ color: "#1a8cff", fontSize: 25 }}></Text>
         <Text style={{ fontSize: 25, color: "white" }}>{Number(userData.wallet).toLocaleString(language, {
         style: "currency",
         currency: currency

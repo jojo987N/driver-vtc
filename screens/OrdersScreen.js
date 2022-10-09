@@ -68,10 +68,10 @@ export default function OrdersScreen({ route, navigation }) {
     const q = query(driversCol, where("id", "==", userData.id));
     onSnapshot(q, (snapshot) => {
       setOnOffline(snapshot.docs[0].data().onOff);
-      if(snapshot.docs[0].data().wallet)
+      // if(snapshot.docs[0].data().wallet)
       setUserData({
         ...userData,
-        wallet: snapshot.docs[0].data().wallet
+        wallet: snapshot.docs[0].data().wallet || 0
       })
       // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
     });

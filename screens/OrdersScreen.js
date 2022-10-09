@@ -68,8 +68,16 @@ export default function OrdersScreen({ route, navigation }) {
     const q = query(driversCol, where("id", "==", userData.id));
     onSnapshot(q, (snapshot) => {
       setOnOffline(snapshot.docs[0].data().onOff);
+      // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
     });
   };
+  // const getCredit = () => {
+  //   const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
+  //       onSnapshot(q, (snapshot) => {
+
+  //          setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
+  //       })
+  // }
   const getOrders = () => {
     onSnapshot(ordersCol, (snapshot) => {
       snapshot.docs.forEach((doc) => {

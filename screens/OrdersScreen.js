@@ -67,7 +67,7 @@ export default function OrdersScreen({ route, navigation }) {
   const getAvailability = () => {
     const q = query(driversCol, where("id", "==", userData.id));
     onSnapshot(q, (snapshot) => {
-      setOnOffline(snapshot.docs[0].data().onOff);
+      // setOnOffline(snapshot.docs[0].data().onOff);
       // if(snapshot.docs[0].data().wallet)
       setUserData({
         ...userData,

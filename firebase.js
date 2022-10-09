@@ -200,7 +200,7 @@ const getOrderMultipleItems = () => {
 //   })
 // }
 
-export const getDriverInfos = async (setUserData) => {
+export const getDriverInfos = async (setUserData, re) => {
   let datas;
   const q = query(driversCol, where('id', '==', auth.currentUser?.uid))
 

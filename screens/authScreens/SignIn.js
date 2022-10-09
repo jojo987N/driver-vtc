@@ -18,7 +18,7 @@ export default function SignIn({navigation}) {
     setLoading(true)
     try {
     const re = await signInWithEmailAndPassword(auth, email, password)
-      getDriverInfos(setUserData).then(docs => {
+      getDriverInfos(setUserData, re).then(docs => {
         // AsyncStorage.setItem('driverData', JSON.stringify({...docs[0], email: re.user.email}))
           // setUserData({...docs[0], email: re.user.email})
           setLoading(false)

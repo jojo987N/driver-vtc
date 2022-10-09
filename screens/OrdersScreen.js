@@ -71,7 +71,7 @@ export default function OrdersScreen({ route, navigation }) {
       // if(snapshot.docs[0].data().wallet)
       setUserData({
         ...userData,
-        wallet: snapshot.docs[0].data().wallet || 0
+        wallet: snapshot.docs[0].data().wallet  
       })
       // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
     });

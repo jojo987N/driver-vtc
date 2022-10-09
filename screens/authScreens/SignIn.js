@@ -19,6 +19,7 @@ export default function SignIn({navigation}) {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const {userData, setUserData} = useContext(UserContext)
+  
   const SignInUser = async ()=>{
     setLoading(true)
     try {
@@ -31,10 +32,7 @@ export default function SignIn({navigation}) {
       setUserData({...datas[0], email: re.user.email})
       // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
       // console.log(datas)
-      if(userData){
-        setLoading(false)
-      navigation.navigate('DrawerNavigator')
-      }
+      
     });
 
 
@@ -54,16 +52,26 @@ export default function SignIn({navigation}) {
       setLoading(false)
   }
 }
-// useEffect(()=>{
-//   AsyncStorage.getItem("driverData")
-//   .then((value)=>{
-//     if(value){
-//       let driverData = JSON.parse(value)
-//       setUserData(driverData)
-//       navigation.navigate('DrawerNavigator')
-//     }
-//   })
-// }, [])
+ useEffect(() => {
+   onAuthStateChanged(auth, (user) => {
+     //console.log(user)
+     if (user) {
+      if(userData){
+        setLoading(false)
+      navigation.navigate('DrawerNavigator')
+      }
+      //  navigation.navigate("DrawerNavigator");
+     }
+   });
+   //   AsyncStorage.getItem("driverData")
+   //   .then((value)=>{
+   //     if(value){
+   //       let driverData = JSON.parse(value)
+   //       setUserData(driverData)
+   //       navigation.navigate('DrawerNavigator')
+   //     }
+   //   })
+ }, []);
 if(loading)
 return <Loading />
   return (

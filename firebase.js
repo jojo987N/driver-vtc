@@ -207,8 +207,9 @@ export const getDriverInfos = async () => {
   onSnapshot(q, (snapshot) => {
     datas = snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
     // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
+    console.log(datas)
   });
-  console.log(datas)
+   
    return datas;
 }
 

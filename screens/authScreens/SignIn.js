@@ -13,7 +13,7 @@ export default function SignIn({navigation}) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
-  const {setUserData} = useContext(UserContext)
+  const {userData, setUserData} = useContext(UserContext)
   const SignInUser = async ()=>{
     setLoading(true)
     try {
@@ -21,6 +21,7 @@ export default function SignIn({navigation}) {
       getDriverInfos(setUserData, re).then(docs => {
         // AsyncStorage.setItem('driverData', JSON.stringify({...docs[0], email: re.user.email}))
           // setUserData({...docs[0], email: re.user.email})
+          console.log(userData)
           setLoading(false)
           navigation.navigate('DrawerNavigator')
        })

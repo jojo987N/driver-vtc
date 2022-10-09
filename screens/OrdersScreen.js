@@ -261,6 +261,8 @@ export default function OrdersScreen({ route, navigation }) {
   );
 }
 const Earnings = () => {
+  const { userData, setUserData } = useContext(UserContext);
+
   return (
     <View
       style={{

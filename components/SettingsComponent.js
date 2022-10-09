@@ -150,7 +150,7 @@ const UploadImage = ({bs, defaultImage}) => {
   return (
     <View style={{
       alignItems: "center",
-      marginTop: 20,
+      // marginTop: 20,
       width: 150,
     }}>
       <Pressable onPress={

@@ -232,8 +232,8 @@ export const updateDriverInfos = (userData, email, name, lastName, address, city
     carNumber,
     updatedAt: serverTimestamp()
   }
-  console.log(arguments)
-  if([...arguments].every(param => param !== undefined))
+  // console.log(arguments)
+  // if([...arguments].every(param => param !== undefined))
   return updateDoc(docRef, data)
     .then(() => setUserData({
       ...userData,

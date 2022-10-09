@@ -40,15 +40,15 @@ export default function SignIn({navigation}) {
 
 
 
-      getDriverInfos(setUserData, re).then(docs => {
-        // AsyncStorage.setItem('driverData', JSON.stringify({...docs[0], email: re.user.email}))
-          // setUserData({...docs[0], email: re.user.email})
-          if(userData){
-            setLoading(false)
-          navigation.navigate('DrawerNavigator')
-          }
+      // getDriverInfos(setUserData, re).then(docs => {
+      //   // AsyncStorage.setItem('driverData', JSON.stringify({...docs[0], email: re.user.email}))
+      //     // setUserData({...docs[0], email: re.user.email})
+      //     if(userData){
+      //       setLoading(false)
+      //     navigation.navigate('DrawerNavigator')
+      //     }
           
-       })
+      //  })
     }catch(e){
       console.log(e)
       setLoading(false)

@@ -8,6 +8,11 @@ import { UserContext } from '../../context/UserContext'
 import Loading from '../../components/Loading'
 import * as Animatable from "react-native-animatable"
 import { LinearGradient } from 'expo-linear-gradient'
+import {
+  addDoc, getFirestore, collection, getDocs, doc,
+  deleteDoc, orderBy, query, limit, serverTimestamp, onSnapshot,
+  updateDoc, where
+} from 'firebase/firestore'
 
 export default function SignIn({navigation}) {
   const [email, setEmail] = useState('')
@@ -18,6 +23,18 @@ export default function SignIn({navigation}) {
     setLoading(true)
     try {
     const re = await signInWithEmailAndPassword(auth, email, password)
+    let datas;
+
+    onSnapshot(q, (snapshot) => {
+      datas = snapshot.docs.map((doc) => ({driverId: doc.id, ...doc.data()}) )
+      setUserData({...datas[0], email: re.user.email})
+      // setAmount(snapshot.docs[0].data().wallet?snapshot.docs[0].data().wallet:0)
+      // console.log(datas)
+    });
+
+
+
+
       getDriverInfos(setUserData, re).then(docs => {
         // AsyncStorage.setItem('driverData', JSON.stringify({...docs[0], email: re.user.email}))
           // setUserData({...docs[0], email: re.user.email})

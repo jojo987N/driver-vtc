@@ -229,9 +229,10 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: "#0080ff",
-    marginHorizontal: 25,
+    // marginHorizontal: 25,
     borderRadius: 5,
-    marginTop: 30
+    // marginTop: 30
+    position: "absolute"
   },
   buttonText: {
     padding: 16,

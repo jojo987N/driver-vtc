@@ -130,7 +130,7 @@ export default function SettingsComponent({ navigation, bs }) {
               onChangeText={(text) => setCarNumber(text)}
               style={styles.textInput} />
           </View>
-          </ScrollView>
+           
           <TouchableOpacity onPress={() => {
             updateDriverInfos(userData, email, name, lastName, address, city, postalCode, phone, carNumber, setUserData)
           }}>
@@ -138,7 +138,7 @@ export default function SettingsComponent({ navigation, bs }) {
               <Text style={styles.buttonText}>Update</Text>
             </View>
           </TouchableOpacity>
-        
+          </ScrollView>
       </View>
     </View>
   )

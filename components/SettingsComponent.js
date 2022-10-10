@@ -36,7 +36,7 @@ export default function SettingsComponent({ navigation, bs }) {
       {/* <UploadCarImage bs={bs} defaultImage={require("../assets/images/berline-icon.png")}/> */}
       </View>
            <View style={{
-        marginTop: 20, flex: 1
+        marginTop: 10, flex: 1
       }}>
         {/* <View style={{ marginHorizontal: 25 }}>
           <SearchBar style={{ backgroundColor: "white", borderBottomColor: "grey", borderBottomWidth: 0.3 }}

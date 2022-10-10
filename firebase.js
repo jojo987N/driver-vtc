@@ -217,7 +217,7 @@ export const updateDriverField = (driver_id, obj) => {
 }
 
 export const updateDriverInfos = (userData, email, name, lastName, address, city, postalCode, phone, carNumber, setUserData) => {
-  const docRef = doc(db, 'drivers', userData.id)
+  const docRef = doc(db, 'drivers', userData.driverId)
   const data = {
     email,
     name,

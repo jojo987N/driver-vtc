@@ -43,7 +43,7 @@ export default function SettingsComponent({ navigation, bs }) {
             setAddress={setAddress} setCity={setCity}/>
         </View> */}
         <ScrollView >
-          <View style={{marginBottom: 50}}>
+          <View style={{marginBottom: 55}}>
           <View style={styles.textInputContainer}>
             <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
               marginLeft: 6,

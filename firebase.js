@@ -242,5 +242,5 @@ export const updateDriverInfos = (userData, email, name, lastName, address, city
       ...userData,
       ...data
     }))
-    else Alert("Vous devez remplir tous les champs")
+    else Alert.alert("Vous devez remplir tous les champs")
 }

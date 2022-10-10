@@ -234,6 +234,7 @@ const styles = StyleSheet.create({
     // marginTop: 30
     position: "absolute",
     bottom: 0,
+    width: "100%"
     
 
   },

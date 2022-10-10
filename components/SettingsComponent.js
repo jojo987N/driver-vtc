@@ -45,7 +45,7 @@ export default function SettingsComponent({ navigation, bs }) {
         <ScrollView >
           <View style={{marginBottom: 65}}>
           <View style={styles.textInputContainer}>
-            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+            <Entypo name="email" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
             }} />
             <TextInput

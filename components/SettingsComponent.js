@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, StatusBar, Image, TextInput, StyleSheet, TouchableOpacity, Pressable } from 'react-native'
 import React, { useState, useEffect, useContext } from 'react'
-import { Entypo, FontAwesome5, MaterialIcons } from '@expo/vector-icons'
+import { Entypo, FontAwesome5, MaterialIcons, AntDesign} from '@expo/vector-icons'
 import { auth, getDriverInfos, updateDriverInfos, updateRestaurantInfos } from '../firebase'
 import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -78,7 +78,7 @@ export default function SettingsComponent({ navigation, bs }) {
           </View>
 
           <View style={styles.textInputContainer}>
-            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+            <Entypo name="address" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
             }} />
             <TextInput
@@ -89,7 +89,7 @@ export default function SettingsComponent({ navigation, bs }) {
           </View>
 
           <View style={styles.textInputContainer}>
-            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+            <FontAwesome5 name="city" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
             }} />
             <TextInput
@@ -99,7 +99,7 @@ export default function SettingsComponent({ navigation, bs }) {
               style={styles.textInput} />
           </View>
           <View style={styles.textInputContainer}>
-            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+            <MaterialIcons name="local-post-office" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
             }} />
           <TextInput
@@ -110,7 +110,7 @@ export default function SettingsComponent({ navigation, bs }) {
           </View>
 
           <View style={styles.textInputContainer}>
-            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+            <Entypo name="phone" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
             }} />
             <TextInput
@@ -122,7 +122,7 @@ export default function SettingsComponent({ navigation, bs }) {
           </View>
 
           <View style={styles.textInputContainer}>
-            <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
+            <AntDesign name="car" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
             }} />
             <TextInput

@@ -42,7 +42,7 @@ export default function SettingsComponent({ navigation, bs }) {
           <SearchBar style={{ backgroundColor: "white", borderBottomColor: "grey", borderBottomWidth: 0.3 }}
             setAddress={setAddress} setCity={setCity}/>
         </View> */}
-        <ScrollView>
+        <ScrollView style={{marginBottom: 20}}>
           <View style={styles.textInputContainer}>
             <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
@@ -131,14 +131,15 @@ export default function SettingsComponent({ navigation, bs }) {
               style={styles.textInput} />
           </View>
            
-          {/* <TouchableOpacity onPress={() => {
+          </ScrollView>
+
+          <TouchableOpacity onPress={() => {
             updateDriverInfos(userData, email, name, lastName, address, city, postalCode, phone, carNumber, setUserData)
           }}>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Update</Text>
             </View>
-          </TouchableOpacity> */}
-          </ScrollView>
+          </TouchableOpacity>
       </View>
     </View>
   )

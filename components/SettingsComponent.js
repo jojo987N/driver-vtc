@@ -233,6 +233,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     // marginTop: 30
     position: "absolute",
+    bottom: 0,
     zIndex: 1
 
   },

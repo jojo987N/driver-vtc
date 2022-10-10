@@ -1,17 +1,17 @@
  {
    "expo": {
-    "name": "Good Foods Driver",
+    "name": "Driver VTC",
     "icon": "./assets/images/logo512.png",
-    "description": "this is Good Foods Driver App", 
+    "description": "Driver App", 
     "splash": {
       "image": "./assets/images/splash-screen.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "version": "1.0.0",
-    "slug": "good-foods-driver0",
+    "slug": "good-foods-driver-vtc",
     "ios": {
-      "bundleIdentifier": "com.goodfoodsdriver.goodfoodsdriver",
+      "bundleIdentifier": "com.goodfoodsdrivervtc.goodfoodsdrivervtc",
       "buildNumber": "1.0.0"
     },
     "android": {
@@ -19,7 +19,7 @@
        "ACCESS_COARSE_LOCATION",
        "ACCESS_FINE_LOCATION"
       ],
-      "package": "com.goodfoodsdriver.goodfoodsdriver",
+      "package": "com.goodfoodsdrivervtc.goodfoodsdrivervtc",
       "versionCode": 1
     }
    }

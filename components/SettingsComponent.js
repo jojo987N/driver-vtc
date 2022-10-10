@@ -42,7 +42,7 @@ export default function SettingsComponent({ navigation, bs }) {
           <SearchBar style={{ backgroundColor: "white", borderBottomColor: "grey", borderBottomWidth: 0.3 }}
             setAddress={setAddress} setCity={setCity}/>
         </View> */}
-        <ScrollView style={{marginBottom: 20}}>
+        <ScrollView style={{marginBottom: 30}}>
           <View style={styles.textInputContainer}>
             <MaterialIcons name="person" size={20} color="#3d5c5c" style={{
               marginLeft: 6,

@@ -4,7 +4,7 @@ import {
   deleteDoc, orderBy, query, limit, serverTimestamp, onSnapshot,
   updateDoc, where
 } from 'firebase/firestore'
-import { LogBox } from 'react-native';
+import { Alert, LogBox } from 'react-native';
 import { getAuth } from 'firebase/auth';
 import { APP_CONSTANT } from './global';
 LogBox.ignoreLogs(['Setting a timer'])
@@ -232,14 +232,15 @@ export const updateDriverInfos = (userData, email, name, lastName, address, city
     carNumber,
     updatedAt: serverTimestamp()
   }
-  console.log(lastName)
-   console.log([...arguments].every(param => {
-    console.log(param, typeof param)
-   }))
-   if([...arguments].every(param => param !== ""))
+  //  console.log([...arguments].every(param => {
+  //   console.log(param, typeof param)
+  //  }))
+  //  if([...arguments].every(param => param !== ""))
+  if(email != "" && name != "" && lastName != "" && address != "" && city != "" && postalCode != "" && phone != "" && carNumber != "")
   return updateDoc(docRef, data)
     .then(() => setUserData({
       ...userData,
       ...data
     }))
+    else Alert("Vous devez remplir tous les champs")
 }

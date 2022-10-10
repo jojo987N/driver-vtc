@@ -135,10 +135,11 @@ export default function SettingsComponent({ navigation, bs }) {
 
           <TouchableOpacity onPress={() => {
             updateDriverInfos(userData, email, name, lastName, address, city, postalCode, phone, carNumber, setUserData)
-          }}>
-            <View style={styles.button}>
+          }}
+          style={styles.button}>
+            {/* <View style={styles.button}> */}
               <Text style={styles.buttonText}>Update</Text>
-            </View>
+            {/* </View> */}
           </TouchableOpacity>
       </View>
     </View>

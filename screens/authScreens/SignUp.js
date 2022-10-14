@@ -65,11 +65,11 @@ export default function SignUp({ navigation }) {
             />
           </View>
           <View style={styles.textInputContainer}>
-            <Entypo name="Téléphone" size={20} color="#3d5c5c" style={{
+            <Entypo name="phone" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
             }} />
             <TextInput
-              placeholder='Phone'
+              placeholder='Téléphone'
               value={phone}
               onChangeText={(text) => setPhone(text)}
               style={styles.textInput}

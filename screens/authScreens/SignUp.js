@@ -47,7 +47,7 @@ export default function SignUp({ navigation }) {
               marginLeft: 6,
             }} />
             <TextInput
-              placeholder='Password'
+              placeholder='Mot de passe'
               value={password}
               onChangeText={(text) => setPassword(text)}
               style={styles.textInput}
@@ -58,14 +58,14 @@ export default function SignUp({ navigation }) {
               marginLeft: 6,
             }} />
             <TextInput
-              placeholder='Name'
+              placeholder='Nom'
               value={name}
               onChangeText={(text) => setName(text)}
               style={styles.textInput}
             />
           </View>
           <View style={styles.textInputContainer}>
-            <Entypo name="phone" size={20} color="#3d5c5c" style={{
+            <Entypo name="Téléphone" size={20} color="#3d5c5c" style={{
               marginLeft: 6,
             }} />
             <TextInput

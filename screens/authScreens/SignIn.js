@@ -44,7 +44,7 @@ return <Loading />
   return (
     <View style={styles.container}>
           <View style={styles.header}>
-              <Text style={styles.title}>Good Foods Driver !</Text>
+              <Text style={styles.title}>Driver App !</Text>
           </View>
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
               <View style={styles.textInputContainer}>
@@ -62,7 +62,7 @@ return <Loading />
                       marginLeft: 6,
                   }} />
                   <TextInput
-                      placeholder='Password'
+                      placeholder='Mot de passe'
                       value={password}
                       onChangeText={(text) => setPassword(text)}
                       style={styles.textInput}
@@ -72,14 +72,14 @@ return <Loading />
               <LinearGradient
                           colors={['#948E99', '#2E1437']}
                           style={styles.signInButton} >
-                          <Text style={{...styles.signInText, color: 'white'}}>Sign In</Text>
+                          <Text style={{...styles.signInText, color: 'white'}}>Se Connecter</Text>
               </LinearGradient>
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
               <LinearGradient
                           colors={['#ada996', '#f2f2f2', '#dbdbdb', '#eaeaea']}
                           style={styles.signInButton} >
-                          <Text style={styles.signInText}>Sign Up</Text>
+                          <Text style={styles.signInText}>S'inscrire</Text>
               </LinearGradient>
               </TouchableOpacity>
           </Animatable.View>

@@ -28,7 +28,7 @@ export default function SignUp({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Register Now !</Text>
+        <Text style={styles.title}>Inscription !</Text>
       </View>
       <Animatable.View style={styles.footer} animation="fadeInUpBig">
         <ScrollView showsVerticalScrollIndicator={false} >

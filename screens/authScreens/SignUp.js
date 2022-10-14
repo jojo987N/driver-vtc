@@ -79,14 +79,14 @@ export default function SignUp({ navigation }) {
             <LinearGradient
               colors={['#948E99', '#2E1437']}
               style={styles.signInButton} >
-              <Text style={{ ...styles.signInText, color: 'white' }}>Sign Up</Text>
+              <Text style={{ ...styles.signInText, color: 'white' }}>S'inscrire</Text>
             </LinearGradient>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <LinearGradient
               colors={['#ada996', '#f2f2f2', '#dbdbdb', '#eaeaea']}
               style={styles.signInButton} >
-              <Text style={styles.signInText}>Sign In</Text>
+              <Text style={styles.signInText}>Se connecter</Text>
             </LinearGradient>
           </TouchableOpacity>
         </ScrollView>

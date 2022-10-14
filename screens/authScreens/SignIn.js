@@ -72,7 +72,7 @@ return <Loading />
               <LinearGradient
                           colors={['#948E99', '#2E1437']}
                           style={styles.signInButton} >
-                          <Text style={{...styles.signInText, color: 'white'}}>Se Connecter</Text>
+                          <Text style={{...styles.signInText, color: 'white'}}>Se connecter</Text>
               </LinearGradient>
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>

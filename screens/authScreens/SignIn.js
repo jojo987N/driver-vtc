@@ -44,7 +44,7 @@ return <Loading />
   return (
     <View style={styles.container}>
           <View style={styles.header}>
-              <Text style={styles.title}>Driver App !</Text>
+              <Text style={styles.title}>Driver VTC !</Text>
           </View>
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
               <View style={styles.textInputContainer}>

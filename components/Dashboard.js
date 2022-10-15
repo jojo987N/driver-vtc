@@ -121,7 +121,8 @@ const styles = StyleSheet.create({
     totalText: {
         fontWeight: "bold",
         color: "grey",
-        marginBottom: 10
+        marginBottom: 10,
+        textAlign: "justify"
     },
     totalValue: {
         color: "#8080ff",

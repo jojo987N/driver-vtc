@@ -14,7 +14,7 @@ export default function OnlineOffLine({onOffline}) {
      fontSize: 25,
      fontWeight: Platform.OS === "android" ? "bold" : "600",
     }}>{ 
-       `${APP_CONSTANT.YOU_ARE} ${onOffline.charAt(0).toUpperCase()+onOffline.slice(1)}`
+       `${APP_CONSTANT.YOU_ARE} ${onOffline.charAt(0).toUpperCase()+onOffline.slice(1) === "Online"?"Online":"bb"}`
       //description
     }</Text>
      

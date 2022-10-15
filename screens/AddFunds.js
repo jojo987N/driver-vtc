@@ -10,7 +10,8 @@ import {
   import { CheckBox, Divider } from "react-native-elements";
   import { stripePayment } from "../utils";
   import { useStripe } from "@stripe/stripe-react-native";
-  
+  import {language, currency}  from '../global'
+
   export default function AddFunds({ navigation, setModalVisible, setAmount }) {
   //   const [amount1, setAmount1] = useState(50);
   //   const [amount2, setAmount2] = useState(100);
@@ -39,7 +40,10 @@ import {
         <View style={{ flex: 1 }}>
           <CheckBox
             title={
-              <Text style={{ marginLeft: 10, fontSize: 25 }}>${checkboxs[0].amount}</Text>
+              <Text style={{ marginLeft: 10, fontSize: 25 }}>{checkboxs[0].amount.toLocaleString(language, {
+                style: "currency",
+                currency: currency
+              })}</Text>
             }
             checked={checkboxs[0].checked}
             checkedIcon="dot-circle-o"
@@ -66,7 +70,10 @@ import {
           />
           <CheckBox
             title={
-              <Text style={{ marginLeft: 10, fontSize: 25 }}>${checkboxs[1].amount}</Text>
+              <Text style={{ marginLeft: 10, fontSize: 25 }}>${checkboxs[1].amount.toLocaleString(language, {
+                style: "currency",
+                currency: currency
+              })}</Text>
             }
             checked={checkboxs[1].checked}
             checkedIcon="dot-circle-o"
@@ -93,7 +100,10 @@ import {
           />
           <CheckBox
             title={
-              <Text style={{ marginLeft: 10, fontSize: 25 }}>${checkboxs[2].amount}</Text>
+              <Text style={{ marginLeft: 10, fontSize: 25 }}>{checkboxs[2].amount.toLocaleString(language, {
+                style: "currency",
+                currency: currency
+              })}</Text>
             }
             checked={checkboxs[2].checked}
             checkedIcon="dot-circle-o"

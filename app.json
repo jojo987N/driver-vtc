@@ -9,9 +9,9 @@
       "backgroundColor": "#ffffff"
     },
     "version": "1.0.0",
-    "slug": "good-foods-driver-vtc",
+    "slug": "driver-vtc",
     "ios": {
-      "bundleIdentifier": "com.goodfoodsdrivervtc.goodfoodsdrivervtc",
+      "bundleIdentifier": "com.drivervtc.drivervtc",
       "buildNumber": "1.0.0"
     },
     "android": {
@@ -19,7 +19,7 @@
        "ACCESS_COARSE_LOCATION",
        "ACCESS_FINE_LOCATION"
       ],
-      "package": "com.goodfoodsdrivervtc.goodfoodsdrivervtc",
+      "package": "com.drivervtc.drivervtc",
       "versionCode": 1
     }
    }

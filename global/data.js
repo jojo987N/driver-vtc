@@ -60,17 +60,27 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vec
     //    color: "black"
     //  },
     // },
-    {
-      label: "Orders Started",
-      icon: {
-        type: FontAwesome,
-        name: "hourglass-start",
-        size: 24,
-        color: "black"
-      }
+    // {
+    //   label: "Orders Started",
+    //   icon: {
+    //     type: FontAwesome,
+    //     name: "hourglass-start",
+    //     size: 24,
+    //     color: "black"
+    //   }
+    // },
+     {
+     label: "Courses Confirmées",
+     icon: {
+       type: MaterialIcons,
+       name: "confirmation-num",
+       size: 24,
+       color: "black"
+     },
     },
+
     {
-      label: "Orders InProgress",
+      label: "Trajet en cours",
       icon: {
         type: FontAwesome,
         name: "hourglass-start",

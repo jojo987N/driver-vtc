@@ -69,7 +69,7 @@ export default function Dashboard({navigation}) {
         <TouchableOpacity onPress={()=>{
           if(item.alias === "Earn")
           Alert.alert(
-            "This alert was dismissed by tapping outside of the alert dialog."
+            "Proposez des courses à vous que vous ne pouvez pas faire, et gagnez jusqu'à 5 à 10% de commission sur la course éffectuée"
           )
           navigation.navigate('DrawerNavigator', {screen: item.alias})
         }} 

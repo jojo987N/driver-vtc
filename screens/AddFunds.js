@@ -70,7 +70,7 @@ import {
           />
           <CheckBox
             title={
-              <Text style={{ marginLeft: 10, fontSize: 25 }}>${checkboxs[1].amount.toLocaleString(language, {
+              <Text style={{ marginLeft: 10, fontSize: 25 }}>{checkboxs[1].amount.toLocaleString(language, {
                 style: "currency",
                 currency: currency
               })}</Text>

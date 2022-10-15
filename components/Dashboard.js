@@ -73,10 +73,11 @@ export default function Dashboard({navigation}) {
           )
           if(item.alias === "Recharche")
           Alert.alert(
-            "Rechargez votre compte","Le client vous paie à bord, en cash, à la fin du trajet ! Nous n'encaissons rien des clients ! Le crédit nous permet de récupérer notre commission .",
-            [{text: 'Rechargez',
-            onPress: () => navigation.navigate('DrawerNavigator', {screen: item.alias})
-            }]
+            "Rechargez votre compte","Le client vous paie à bord, en cash, à la fin du trajet ! Nous n'encaissons rien des clients ! Le crédit nous permet de récupérer notre commission ."
+            // ,
+            // [{text: 'Rechargez',
+            // onPress: () => navigation.navigate('DrawerNavigator', {screen: item.alias})
+            // }]
           )
           // navigation.navigate('DrawerNavigator', {screen: item.alias})
         }} 

@@ -71,7 +71,7 @@ export default function Dashboard({navigation}) {
           Alert.alert(
             "Gagnez de l'argent","Proposez des courses à vous que vous ne pouvez pas faire, et gagnez jusqu'à 5 à 10% de commission sur la course éffectuée, dans notre réseau."
           )
-          if(item.alias === "Recharche")
+          if(item.alias === "Recharge")
           Alert.alert(
             "Rechargez votre compte","Le client vous paie à bord, en cash, à la fin du trajet ! Nous n'encaissons rien des clients ! Le crédit nous permet de récupérer notre commission ."
             // ,

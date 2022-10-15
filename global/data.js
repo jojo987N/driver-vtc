@@ -12,6 +12,7 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vec
     // },
 
     {
+      alias: "Recharge",
       label: "Rechargez votre compte",
       icon: {
         type: FontAwesome,
@@ -31,7 +32,7 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vec
       },
      },
     {
-     label: "History",
+     label: "Historique",
      icon: {
        type: FontAwesome,
        name: "history",

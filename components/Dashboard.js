@@ -67,7 +67,7 @@ export default function Dashboard({navigation}) {
     renderItem={({item})=>{
       return (
         <TouchableOpacity onPress={()=>{
-          navigation.navigate('DrawerNavigator', {screen: item.label})
+          navigation.navigate('DrawerNavigator', {screen: item.alias})
         }} 
         style={styles.iconContainer}>
         {createElement(item.icon.type, {

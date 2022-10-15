@@ -33,6 +33,7 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vec
       },
      },
     {
+     alias: "History", 
      label: "Historique",
      icon: {
        type: FontAwesome,

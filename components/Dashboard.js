@@ -79,7 +79,7 @@ export default function Dashboard({navigation}) {
             onPress: () => navigation.navigate('DrawerNavigator', {screen: item.alias})
             }]
           )
-          // navigation.navigate('DrawerNavigator', {screen: item.alias})
+           navigation.navigate('DrawerNavigator', {screen: item.alias})
         }} 
         style={styles.iconContainer}>
         {createElement(item.icon.type, {

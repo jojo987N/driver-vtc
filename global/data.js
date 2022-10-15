@@ -1,4 +1,4 @@
-import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vector-icons";
+import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto, AntDesign} from "@expo/vector-icons";
 
  export const dashboardItems = [
     // {
@@ -88,6 +88,15 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vec
         color: "black"
       }
     },
+    {
+      label: "Courses Terminées",
+      icon: {
+        type: AntDesign,
+        name: "checkcircle",
+        size: 24,
+        color: "black"
+      },
+     },
     // {
     //   label: "My Location",
     //   icon: {

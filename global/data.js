@@ -1,4 +1,4 @@
-import { Entypo, FontAwesome, Ionicons, MaterialIcons} from "@expo/vector-icons";
+import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vector-icons";
 
  export const dashboardItems = [
     {
@@ -11,6 +11,15 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons} from "@expo/vector-icons"
      },
     },
     {
+      label: "Gagnez de l'argent",
+      icon: {
+        type: Fontisto,
+        name: "money-symbol",
+        size: 24,
+        color: "black"
+      },
+     },
+    {
      label: "History",
      icon: {
        type: FontAwesome,
@@ -19,15 +28,15 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons} from "@expo/vector-icons"
        color: "black"
      },
     },
-    {
-     label: "Stats",
-     icon: {
-       type: Ionicons,
-       name: "stats-chart",
-       size: 24,
-       color: "black"
-     },
-    },
+    // {
+    //  label: "Stats",
+    //  icon: {
+    //    type: Ionicons,
+    //    name: "stats-chart",
+    //    size: 24,
+    //    color: "black"
+    //  },
+    // },
     // {
     //  label: "Orders",
     //  icon: {

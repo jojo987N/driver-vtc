@@ -1,15 +1,26 @@
 import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vector-icons";
 
  export const dashboardItems = [
+    // {
+    //  label: "Order Confirmed",
+    //  icon: {
+    //    type: MaterialIcons,
+    //    name: "confirmation-num",
+    //    size: 24,
+    //    color: "black"
+    //  },
+    // },
+
     {
-     label: "Order Confirmed",
-     icon: {
-       type: MaterialIcons,
-       name: "confirmation-num",
-       size: 24,
-       color: "black"
-     },
+      label: "Rechargez votre compte",
+      icon: {
+        type: FontAwesome,
+        name: "money",
+        size: 24,
+        color: "black"
+      }
     },
+
     {
       label: "Gagnez de l'argent",
       icon: {
@@ -73,15 +84,7 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vec
     //     color: "black"
     //   }
     // },
-    {
-      label: "Recharge",
-      icon: {
-        type: FontAwesome,
-        name: "money",
-        size: 24,
-        color: "black"
-      }
-    },
+     
 ]
 
 

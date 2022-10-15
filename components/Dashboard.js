@@ -69,7 +69,7 @@ export default function Dashboard({navigation}) {
         <TouchableOpacity onPress={()=>{
           if(item.alias === "Earn")
           Alert.alert(
-            "Gagnez","Proposez des courses à vous que vous ne pouvez pas faire, et gagnez jusqu'à 5 à 10% de commission sur la course éffectuée"
+            "Gagnez de l'argent","Proposez des courses à vous que vous ne pouvez pas faire, et gagnez jusqu'à 5 à 10% de commission sur la course éffectuée, dans notre réseau"
           )
           navigation.navigate('DrawerNavigator', {screen: item.alias})
         }} 

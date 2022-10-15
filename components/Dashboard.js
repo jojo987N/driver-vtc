@@ -1,4 +1,4 @@
-import { View, Text, Dimensions, StyleSheet, ScrollView, TouchableOpacity} from 'react-native'
+import { View, Text, Dimensions, StyleSheet, ScrollView, TouchableOpacity, Alert} from 'react-native'
 import React, { createElement } from 'react'
 import {
     LineChart,

@@ -18,7 +18,7 @@ export default function OnlineOffLine({onOffline}) {
       //description
     }</Text>
      
-    <Text style={{ color: "grey" }}> Your Orders : </Text>
+    {/* <Text style={{ color: "grey" }}> Your Orders : </Text> */}
    
 
   </View>

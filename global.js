@@ -10,7 +10,8 @@ export const RADIUS = 5;
 
 export const APP_CONSTANT = {
 
-    YOU_ARE: "You're",
+    // YOU_ARE: "You're",
+    YOU_ARE: "Vous êtes ",
     ONLINE: "online",
     OFFLINE: "offline",
     COMFIRMED: "confirmed",

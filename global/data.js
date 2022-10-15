@@ -23,6 +23,7 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto} from "@expo/vec
     },
 
     {
+      alias: "Earn",
       label: "Gagnez de l'argent",
       icon: {
         type: Fontisto,

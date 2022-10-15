@@ -67,6 +67,10 @@ export default function Dashboard({navigation}) {
     renderItem={({item})=>{
       return (
         <TouchableOpacity onPress={()=>{
+          if(item.alias === "Earn")
+          Alert.alert(
+            "This alert was dismissed by tapping outside of the alert dialog."
+          )
           navigation.navigate('DrawerNavigator', {screen: item.alias})
         }} 
         style={styles.iconContainer}>

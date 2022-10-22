@@ -230,7 +230,7 @@ export default function OrdersScreen({ route, navigation }) {
           snapPoints={["12%", bottomSheetHeight]}
         >
           <OnlineOffLine onOffline={onOffline} />
-          <WarningCredit />
+          <WarningCredit navigation={navigation}/>
           {route.params.myLocation && <Loading />}
           {loading && <Loading />}
           {route.params.dashboard && _Dashboard}
@@ -423,7 +423,7 @@ export const MenuButton = ({ navigation }) => {
   );
 };
 
-const WarningCredit = () => {
+const WarningCredit = ({navigation}) => {
   return (
     <TouchableOpacity style={{backgroundColor: "red"}}
     onPress={()=> {

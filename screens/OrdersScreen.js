@@ -425,7 +425,7 @@ export const MenuButton = ({ navigation }) => {
 
 const WarningCredit = () => {
   return (
-    <View style={{backgroundColor: "white"}}>
+    <View style={{backgroundColor: "red"}}>
       <Text style={{color: "white"}}>Rechargez votre compte pour pouvoir recevoir des courses</Text>
     </View>
   )

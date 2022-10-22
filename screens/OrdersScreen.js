@@ -425,8 +425,11 @@ export const MenuButton = ({ navigation }) => {
 
 const WarningCredit = () => {
   return (
-    <View style={{backgroundColor: "red"}}>
+    <TouchableOpacity style={{backgroundColor: "red"}}
+    onPress={()=> {
+      navigation.navigate('DrawerNavigator', {screen: "Recharge"})
+    }}>
       <Text style={{color: "white", padding: 5}}>Rechargez votre compte pour pouvoir recevoir des courses</Text>
-    </View>
+    </TouchableOpacity>
   )
 }

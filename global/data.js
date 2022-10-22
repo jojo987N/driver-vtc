@@ -22,16 +22,16 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto, AntDesign} from
       }
     },
 
-    {
-      alias: "Earn",
-      label: "Gagnez de l'argent",
-      icon: {
-        type: Fontisto,
-        name: "money-symbol",
-        size: 24,
-        color: "black"
-      },
-     },
+    // {
+    //   alias: "Earn",
+    //   label: "Gagnez de l'argent",
+    //   icon: {
+    //     type: Fontisto,
+    //     name: "money-symbol",
+    //     size: 24,
+    //     color: "black"
+    //   },
+    //  },
     {
      alias: "History", 
      label: "Historique",
@@ -97,15 +97,16 @@ import { Entypo, FontAwesome, Ionicons, MaterialIcons, Fontisto, AntDesign} from
         color: "black"
       },
      },
-    // {
-    //   label: "My Location",
-    //   icon: {
-    //     type: Entypo,
-    //     name: "location",
-    //     size: 24,
-    //     color: "black"
-    //   }
-    // },
+    {
+      label: "Ma Position",
+      alias: "My Location",
+      icon: {
+        type: Entypo,
+        name: "location",
+        size: 24,
+        color: "black"
+      }
+    },
      
 ]
 

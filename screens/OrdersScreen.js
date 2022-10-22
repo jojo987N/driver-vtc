@@ -230,6 +230,7 @@ export default function OrdersScreen({ route, navigation }) {
           snapPoints={["12%", bottomSheetHeight]}
         >
           <OnlineOffLine onOffline={onOffline} />
+          <WarningCredit />
           {route.params.myLocation && <Loading />}
           {loading && <Loading />}
           {route.params.dashboard && _Dashboard}
@@ -250,7 +251,6 @@ export default function OrdersScreen({ route, navigation }) {
           </View>}
         </BottomSheet>
       </View>
-      <WarningCredit />
       {showOrderCountDown ? (
         <View
           style={{
@@ -425,7 +425,7 @@ export const MenuButton = ({ navigation }) => {
 
 const WarningCredit = () => {
   return (
-    <View style={{position: "absolute", bottom: 0, backgroundColor: "white"}}>
+    <View style={{backgroundColor: "white"}}>
       <Text style={{color: "white"}}>Rechargez votre compte pour pouvoir recevoir des courses</Text>
     </View>
   )

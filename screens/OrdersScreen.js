@@ -230,7 +230,7 @@ export default function OrdersScreen({ route, navigation }) {
           snapPoints={["12%", bottomSheetHeight]}
         >
           <OnlineOffLine onOffline={onOffline} />
-          <WarningCredit navigation={navigation}/>
+          {userData.wallet === 0?<WarningCredit navigation={navigation}/>:<></>}
           {route.params.myLocation && <Loading />}
           {loading && <Loading />}
           {route.params.dashboard && _Dashboard}
